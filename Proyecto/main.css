@@ -343,3 +343,39 @@ a:visited {
 a:active {
     text-decoration: none;
 }
+
+footer{
+	background-color: var(--primario);
+	width: 100%;
+	text-align: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+footer .name{
+	color:  #8d9093;
+	font-size: 30px;
+}
+
+footer .final{
+	color:  #8f9296;
+	font-size: 25px;
+}
+
+footer .links{
+	list-style: none;
+	font-weight: bold;
+	color:  #ffffff;
+	padding: 35px 0 35px;
+
+}
+
+footer .links a{
+	display:inline-block;
+	text-decoration: none;
+  font-size: 25px;
+}
+
+footer .links a:hover{
+  text-decoration: underline;
+}
