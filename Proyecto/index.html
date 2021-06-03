@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script>
+        window.onload = function() {
+
+        document.getElementById('item-1').addEventListener('click', function (e) {
+            document.getElementById("top").style.backgroundColor = "#343A40"; //negro
+            document.getElementById("resumen").innerHTML = "Noticia3"
+
+        });
+        document.getElementById('item-2').addEventListener('click', function (e) {
+            document.getElementById("top").style.backgroundColor = "#E63946"; //red
+            document.getElementById("resumen").innerHTML = "Noticia2"
+
+        });
+        document.getElementById('item-3').addEventListener('click', function (e) {
+            document.getElementById("top").style.backgroundColor = "#1D3557"; //blue
+            document.getElementById("notatitulo").innerHTML = "Televisa lanza versión gratuita de la plataforma de streaming Blim"
+            document.getElementById("resumen").innerHTML = "La compañía mexicana Televisa anunció este lunes una versión gratuita de su plataforma digital Blim tv en más de 18 países de Latinoamérica que funcionará con un esquema de anuncios publicitarios. <br><br> El plan básico será una alternativa de acceso gratuito y con publicidad (AVOD) con más de 14 mil horas de “contenidos clásicos y populares” frente al servicio “premium” (SVOD), que tiene un precio de suscripción y ofrece 35 canales en vivo y 37 horas de catálogo, detalló la empresa en un comunicado."
+            
+        });
+        };
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>INS - Oficial</title>
+</head>
+<body>
+    <div id="topbar">
+        <div id="logoc">
+            <div id="logoc2">
+                <img id="logo" src="recursos/logo.svg" alt="logo">
+                <div id="inicio">
+                    INICIO
+                </div>
+            </div>
+        </div>
+        <div id="espacio">
+
+        </div>
+        <div id="menus">
+            <a class="item" href="">Nosotros</a>
+            <a class="item" href="">Blog</a>
+            <a class="item" href="">Acciones</a>
+        </div>
+    </div>
+
+    <div id="landing">
+        <div id="titulo">
+            Instituto <br>
+            Nacional de <br>
+            Streaming
+        </div>
+        <div id="gradient"></div>
+        <video autoplay muted loop>
+            <source src="recursos/videos/main.mp4" type="video/mp4"> 
+        </video>
+    </div>
+
+    <div id="noticias">
+        <div id="top">
+            <p id="ult">
+                ULTIMAS NOTICIAS
+            </p>
+            <div id="nota">
+                <div id="notatitulo">
+                    [TITULO DE LA NOTICIA / BLOG: LARGOOOOOO]
+                </div>
+                <p style="font-size: 40px;color: rgba(255, 255,255, 0.28)">
+                TL;DR
+                </p>
+                <div id="resumen">
+                    [Aenean id est lectus. Vivamus ac fringilla magna, nec porttitor nisi. Curabitur fringilla orci vitae ex hendrerit semper. Fusce vel bibendum magna. Aliquam commodo congue tortor, eget placerat tortor malesuada in. Suspendisse mollis aliquam libero, nec convallis leo fringilla volutpat. Duis purus neque, facilisis eu faucibus vitae, lobortis ac erat.]
+                </div>
+
+            </div>
+            <div id="corrusel">
+                <!--
+                    recurso:
+                        https://codepen.io/aybukeceylan/pen/RwrRPoO
+                -->
+                <div class="container">
+                    <input type="radio" name="slider" id="item-1" checked>
+                    <input type="radio" name="slider" id="item-2">
+                    <input type="radio" name="slider" id="item-3">
+                  <div class="cards">
+                    <label class="card" for="item-1" id="song-1">
+                      <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+                    </label>
+                    <label class="card" for="item-2" id="song-2">
+                      <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                    </label>
+                    <label class="card" for="item-3" id="song-3">
+                      <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                    </label>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html></html>
