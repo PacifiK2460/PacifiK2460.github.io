@@ -3,21 +3,28 @@
 <head>
     <script>
         window.onload = function() {
-
+//343A40
         document.getElementById('item-1').addEventListener('click', function (e) {
             document.getElementById("top").style.backgroundColor = "#343A40"; //negro
-            document.getElementById("resumen").innerHTML = "Noticia3"
-
+            document.getElementById("notatitulo").innerHTML = "League of Legends alcanza las 40 mil millones de visualizaciones en Twitch, y otros juegos en el top 5"
+            document.getElementById("resumen").innerHTML =
+            "League of Legends, Fortnite, Counter-Stike GO, DOTA 2 y GTA V son los cinco juegos más vistos de Twitch en mayo 2021. El título de Riot se corona con 40 mil millones de visualizaciones. <br><br> No hay duda de que Twitch es la plataforma gaming más exitosa del momento, después de una trayectoria casi inmaculada para millones de usuarios de todo el mundo, streamers y profesionales dedicados a los videojuegos. Con motivo de su inminente décimo aniversario este mes, Twitch ha desvelado cuáles han sido los 5 juegos más vistos de mayo 2021." 
+            document.getElementById("leer").style.backgroundColor ="#343A40"
         });
+        //1D3557
         document.getElementById('item-2').addEventListener('click', function (e) {
-            document.getElementById("top").style.backgroundColor = "#E63946"; //red
-            document.getElementById("resumen").innerHTML = "Noticia2"
-
-        });
-        document.getElementById('item-3').addEventListener('click', function (e) {
-            document.getElementById("top").style.backgroundColor = "#1D3557"; //blue
+            document.getElementById("top").style.backgroundColor = "#1D3557"; //red
             document.getElementById("notatitulo").innerHTML = "Televisa lanza versión gratuita de la plataforma de streaming Blim"
             document.getElementById("resumen").innerHTML = "La compañía mexicana Televisa anunció este lunes una versión gratuita de su plataforma digital Blim tv en más de 18 países de Latinoamérica que funcionará con un esquema de anuncios publicitarios. <br><br> El plan básico será una alternativa de acceso gratuito y con publicidad (AVOD) con más de 14 mil horas de “contenidos clásicos y populares” frente al servicio “premium” (SVOD), que tiene un precio de suscripción y ofrece 35 canales en vivo y 37 horas de catálogo, detalló la empresa en un comunicado."
+            document.getElementById("leer").style.backgroundColor ="#1D3557"
+
+        });
+        //A20205
+        document.getElementById('item-3').addEventListener('click', function (e) {
+            document.getElementById("top").style.backgroundColor = "#A20205"; //blue
+            document.getElementById("notatitulo").innerHTML = "Una breve historia de la personalización de Netflix"
+            document.getElementById("resumen").innerHTML = "Este ensayo detalla el progreso de Netflix desde su lanzamiento en 1998 hasta el reciente lanzamiento de su botón 'Me siento afortunado', una táctica de comercialización en la que los miembros de Netflix confían totalmente en los algoritmos de personalización de Netflix. Es un viaje complicado, con una estrategia de personalización en evolución impulsada por la capacidad de Netflix para ejecutar experimentos de alta cadencia utilizando su sistema de prueba A / B de cosecha propia."
+            document.getElementById("leer").style.backgroundColor ="#A20205"
             
         });
         };
@@ -69,13 +76,13 @@
             </p>
             <div id="nota">
                 <div id="notatitulo">
-                    [TITULO DE LA NOTICIA / BLOG: LARGOOOOOO]
+                    League of Legends alcanza las 40 mil millones de visualizaciones en Twitch, y otros juegos en el top 5
                 </div>
                 <p style="font-size: 40px;color: rgba(255, 255,255, 0.28)">
                 TL;DR
                 </p>
                 <div id="resumen">
-                    [Aenean id est lectus. Vivamus ac fringilla magna, nec porttitor nisi. Curabitur fringilla orci vitae ex hendrerit semper. Fusce vel bibendum magna. Aliquam commodo congue tortor, eget placerat tortor malesuada in. Suspendisse mollis aliquam libero, nec convallis leo fringilla volutpat. Duis purus neque, facilisis eu faucibus vitae, lobortis ac erat.]
+                    League of Legends, Fortnite, Counter-Stike GO, DOTA 2 y GTA V son los cinco juegos más vistos de Twitch en mayo 2021. El título de Riot se corona con 40 mil millones de visualizaciones. <br><br> No hay duda de que Twitch es la plataforma gaming más exitosa del momento, después de una trayectoria casi inmaculada para millones de usuarios de todo el mundo, streamers y profesionales dedicados a los videojuegos. Con motivo de su inminente décimo aniversario este mes, Twitch ha desvelado cuáles han sido los 5 juegos más vistos de mayo 2021.
                 </div>
 
             </div>
@@ -90,16 +97,19 @@
                     <input type="radio" name="slider" id="item-3">
                   <div class="cards">
                     <label class="card" for="item-1" id="song-1">
-                      <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+                      <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/06/21/15611361920414.jpg" alt="song">
                     </label>
                     <label class="card" for="item-2" id="song-2">
-                      <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                      <img src="https://pbs.twimg.com/profile_images/1238219512614453250/2YQAEbqf_400x400.jpg" alt="song">
                     </label>
                     <label class="card" for="item-3" id="song-3">
-                      <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                      <img src="https://susanasaenz.com/wp-content/uploads/2021/04/3WXM77CFO5C4LBPLS4U3GQNPCA.jpg" alt="song">
                     </label>
                   </div>
                 </div>
+                <a href="" id="leer">
+                    <p>LEER</p>
+                </a>
             </div>
         </div>
     </div>
