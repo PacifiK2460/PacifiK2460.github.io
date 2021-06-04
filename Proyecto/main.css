@@ -445,32 +445,95 @@ footer .links a:hover{
 }
 
 section{
-    background-color: rgb(10, 26, 112);
-    border-color: black;
+    background-color: var(--primario);
 
     margin-left: 70px;
     width: 100%;
 
     padding: 25px;
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11),
+    0 32px 64px rgba(0,0,0,0.11);
+
 }
 
 section p{
     font-size: 30px;
     text-align: justify;    
     margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section img{
+    width: 75%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 aside{
 
-    background-color: rgb(148, 68, 68);
-    border-color: black;
+    background-color: rgb(255, 255, 255);
     margin-right: 70px;
     margin-left: 50px;
     width: 500px;
 
+    font-size: 50px;
+    border-radius: 10px;
+    height: 65px;
+    color: var(--primario);
+}
+
+aside img{
+    width: 50%;
+    height: auto;
+    background-color: var(--primario);
 }
 
 #noticiacontenido{
     display: flex;
     flex-direction: row;
 }
+#landing #noticiatitulonoticia a{
+    padding: 5px;
+    transition: 0.9s;
+}
+
+#landing #noticiatitulonoticia a:hover{
+    color: white;
+    background-color: var(--primario);
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
