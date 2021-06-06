@@ -421,7 +421,6 @@ footer .links a:hover{
 }
 
 #noticiatitulonoticia{
-    border: var(--borde);
     position: absolute;
     top: 120px;
 
@@ -506,8 +505,7 @@ aside img{
 }
 
 #landing #noticiatitulonoticia a:hover{
-    color: white;
-    background-color: var(--primario);
+    text-decoration: underline;
 }
 
 /* The alert message box */
