@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Programación WEB 1 | Practico 1</title>
+    <meta charset="utf-8" />
+    <style>
+        div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+          align-items: center;
+        }
+        
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+        
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+        
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+        </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="inicio">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#costos">Costos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </ul>
+    </nav>
+
+    <!-- Galeria -->
+    <div id="galeria">
+      <h1>Galeria</h1>
+      <div class="gallery">
+        <a target="_blank" href="./media/1.jpg">
+          <img src="./media/1.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Dilicioso Sushi</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="./media/2.jpg">
+          <img src="./media/2.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Dilicioso Sushi</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="./media/3.jpg">
+          <img src="./media/3.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Dilicioso Sushi</div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="./media/4.jpg">
+          <img src="./media/4.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Dilicioso Sushi</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="./media/5.jpg">
+          <img src="./media/5.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Dilicioso Sushi</div>
+      </div>
+    </div>
+
+    <!-- Costos -->
+    <div id="costos">
+        <table border="1" style="width: 100%;">
+            <caption>
+                <h2 align="center">
+                    Encuentra el mejor sabor a los mejores precios
+                </h2>
+            </caption>
+            <th>
+                Platillo
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Ingredientes
+            </th>
+            <tr>
+                <td>
+                    Sushi
+                </td>
+                <td>
+                    $ 100
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sashimi
+                </td>
+                <td>
+                    $ 150
+                </td>
+                <td>
+                    Pescado crudo, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Maki
+                </td>
+                <td>
+                    $ 200
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Uramaki
+                </td>
+                <td>
+                    $ 250
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Temaki
+                </td>
+                <td>
+                    $ 300
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nigiri
+                </td>
+                <td>
+                    $ 350
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gunkan
+                </td>
+                <td>
+                    $ 400
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sushi roll
+                </td>
+                <td>
+                    $ 450
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sushi burrito
+                </td>
+                <td>
+                    $ 500
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sushi pizza
+                </td>
+                <td>
+                    $ 550
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sushi taco
+                </td>
+                <td>
+                    $ 600
+                </td>
+                <td>
+                    Arroz, pescado, alga nori, salsa de soja, wasabi y gengibre
+                </td>
+            </tr>
+        </table>
+
+        <table border="1" style="width: 100%;">
+            <caption>
+                <h2 align="center">
+                    Ultimas promociones!
+                </h2>
+            </caption>
+            <th>
+                Servicio
+            </th>
+            <th>
+                Precio promocional
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+                Duracion
+            </th>
+            <tr>
+                <td>
+                    Fiesta Infantil
+                </td>
+                <td>
+                    $ 1000
+                </td>
+                <td>
+                    10 personas, 10 platos de sushi, 10 bebidas, 10 postres
+                </td>
+                <td>
+                    1 mes
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fiesta de cumpleaños
+                </td>
+                <td>
+                    $ 2000
+                </td>
+                <td>
+                    20 personas, 20 platos de sushi, 20 bebidas, 20 postres
+                </td>
+                <td>
+                    1 mes
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fiesta de graduacion
+                </td>
+                <td>
+                    $ 3000
+                </td>
+                <td>
+                    30 personas, 30 platos de sushi, 30 bebidas, 30 postres
+                </td>
+                <td>
+                    1 mes
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Fiesta de boda
+                </td>
+                <td>
+                    $ 4000
+                </td>
+                <td>
+                    40 personas, 40 platos de sushi, 40 bebidas, 40 postres
+                </td>
+                <td>
+                    1 mes
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Nosotros -->
+    <div id="nosotros">
+      <hgroup>
+        <h1>Marco Institucional</h1>
+        <h2>Filosofia</h2>
+        <p>
+          Ofrecer productos originales y nutritivos, manteniéndonos en el
+          mercado nacional e internacional con recetas novedosas para brindar
+          así un toque personal a cada platillo, comprometiéndonos en conservar
+          una atmosfera cálida y fresca para nuestros clientes y colaboradores
+          siendo fuente de ideas que innovan continuamente para así lograr
+          nuestra sustentabilidad, apegándonos a nuestras políticas, códigos y
+          reglamentos que rigen nuestro actuar.
+        </p>
+        <h2>Mision</h2>
+        <p>
+          Comprometidos con la innovación y la calidad ofrecemos a nuestros
+          clientes un espacio diferente donde el sabor y el servicio generan una
+          experiencia de emociones y sensaciones únicas.
+        </p>
+        <h2>Vision</h2>
+        <p>
+            Ser reconocidos como la marca líder en comida japonesa por su excelencia en servicio, innovación y calidad, gracias a nuestros colaboradores y valores institucionales lo que nos perfila a mercados internacionales.
+        </p>
+
+        <h2>
+            Nuestras Ultimas Publicaciones
+        </h2>
+        
+      </hgroup>
+
+      <hgroup>
+        <h2>Ubicación</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59130.94243696925!2d-101.07109654179683!3d22.13802460000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a98b834149659%3A0xf0075f941638f048!2sSushi%20Roll!5e0!3m2!1sen!2smx!4v1677246063895!5m2!1sen!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </hgroup>
+    </div>
+
+    <footer>
+        <p>
+            Ubicacion: 
+            <a href="https://www.google.com/maps">
+                Plaza Citadella
+            </a>
+        </p>
+        <p>
+            Telfono: 
+            <a href="tel:1234567890">
+                1234567890
+            </a>
+        </p>
+        <p>
+            Correo: 
+            <a href="mailto:mail@example.com">
+                mail@example.com
+            </a>
+        </p>
+        <p>
+            <a href="https://www.google.com/maps">
+            </a>
+        </p>
+        <address>
+            Plaza Citadella
+            Av. Salvador Nava Martínez 3125
+            Local 9
+            Colinas del Parque
+            78294 San Luis, S.L.P.
+        </address>
+        <strong>
+            &copy; 2023 Sushi Express
+        </strong>
+    </footer>
+  </body>
+</html>
