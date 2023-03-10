@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinepolis</title>
+
+    <!-- icon -->
+    <link
+      rel="icon"
+      href="./Practica 1/media/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <style>
+      hgroup {
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: left;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      ul {
+        text-align: center;
+      }
+
+      form {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+      }
+
+      form > * {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+
+      .form_actions {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CInepolis - Compra de Bolteos</h1>
+
+    <form>
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="nombre">
+          Nombre
+          <input type="text" name="nombre" id="nombre" />
+        </label>
+
+        <label for="apellido">
+          Apellido
+          <input type="text" name="apellido" id="apellido" />
+        </label>
+
+        <label for="correo">
+          Correo
+          <input type="email" name="correo" id="correo" />
+        </label>
+
+        <label for="telefono">
+          Telefono
+          <input type="tel" name="telefono" id="telefono" />
+        </label>
+
+        <label for="fecha">
+          Fecha de Nacimiento
+          <input type="date" name="fecha" id="fecha" />
+        </label>
+
+        <label for="genero">
+          Genero
+          <select name="genero" id="genero">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Datos de la Pelicula</legend>
+        <label for="pelicula">
+          Pelicula
+          <select name="pelicula" id="pelicula">
+            <option value="pelicula1">Pelicula 1</option>
+            <option value="pelicula2">Pelicula 2</option>
+            <option value="pelicula3">Pelicula 3</option>
+          </select>
+        </label>
+
+        <label for="sala">
+          Sala
+          <select name="sala" id="sala">
+            <option value="sala1">Sala 1</option>
+            <option value="sala2">Sala 2</option>
+            <option value="sala3">Sala 3</option>
+          </select>
+        </label>
+
+        <label for="horario">
+          Horario
+          <input type="time" name="horario" id="horario" />
+        </label>
+
+        <label for="asiento">
+          Asiento
+          <select name="asiento" id="asiento">
+            <option value="asiento1">Asiento 1</option>
+            <option value="asiento2">Asiento 2</option>
+            <option value="asiento3">Asiento 3</option>
+          </select>
+        </label>
+
+        <label for="cantidad">
+          Cantidad
+          <input type="number" name="cantidad" id="cantidad" />
+        </label>
+
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Datos de la Tarjeta</legend>
+
+        <label for="numero">
+          Numero de Tarjeta
+          <input type="number" name="numero" id="numero" />
+        </label>
+
+        <label for="fecha">
+          Fecha de Expiracion
+          <input type="date" name="fecha" id="fecha" />
+        </label>
+
+        <label for="cvv">
+          CVV
+          <input type="number" name="cvv" id="cvv" />
+        </label>
+
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Datos de la Factura</legend>
+
+        <label for="nombre">
+          Nombre
+          <input type="text" name="nombre" id="nombre" />
+        </label>
+
+        <label for="direccion">
+          Direccion
+          <input type="text" name="direccion" id="direccion" />
+        </label>
+
+        <label for="correo">
+          Correo
+          <input type="email" name="correo" id="correo" />
+        </label>
+
+        <label for="telefono">
+          Telefono
+          <input type="tel" name="telefono" id="telefono" />
+        </label>
+
+        <label for="rfc">
+          RFC
+          <input type="text" name="rfc" id="rfc" />
+        </label>
+
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Terminos y Condiciones</legend>
+
+        <label for="terminos">
+          <input type="checkbox" name="terminos" id="terminos" />
+          Acepto los terminos y condiciones
+        </label>
+
+      </fieldset>
+    </form>
+    
+    <div class="form_actions">
+      <button type="submit">Comprar</button>
+    </div>
+  </body>
+</html>
