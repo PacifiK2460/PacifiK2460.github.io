@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Evidencias</title>
+
+    <!-- icon -->
+    <link
+      rel="icon"
+      href="./Practica 1/media/logo.png"
+      type="image/png"
+      sizes="16x16"
+    />
+
+    <style>
+      hgroup {
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: left;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      ul {
+        text-align: center;
+      }
+
+      form {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+      }
+
+      form > * {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+
+      .form_actions {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tienda de Ropa Online</h1>
+    <form>
+      <fieldset>
+        <legend>Información del Cliente</legend>
+
+        <label for="nombre">
+          Nombre:
+          <span>*</span>
+          <br />
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+        </label>
+
+        <label for="apellido_paterno">
+          Apellido Paterno:
+          <span>*</span>
+          <br />
+          <input
+            type="text"
+            name="apellido_paterno"
+            id="apellido_paterno"
+            placeholder="Apellido Paterno"
+            required
+          />
+        </label>
+
+        <label for="apellido_materno">
+          Apellido Materno:
+          <span>*</span>
+          <br />
+          <input
+            type="text"
+            name="apellido_materno"
+            id="apellido_materno"
+            placeholder="Apellido Materno"
+            required
+          />
+        </label>
+
+        <label for="nombre_de_usuario">
+          Nombre de Usuario:
+          <br />
+          <input
+            type="text"
+            name="nombre_de_usuario"
+            id="nombre_de_usuario"
+            placeholder="Nombre de Usuario"
+          />
+        </label>
+
+        <label for="contraseña">
+          Contraseña:
+          <br />
+          <input
+            type="password"
+            name="contraseña"
+            id="contraseña"
+            placeholder="Contraseña"
+          />
+        </label>
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Facturación</legend>
+
+        <label for="Calle">
+          Calle:
+          <br />
+          <input type="text" name="Calle" id="Calle" placeholder="Calle" />
+        </label>
+
+        <label for="Numero">
+          Numero:
+          <br />
+          <input type="number" name="Numero" id="Numero" placeholder="Numero" />
+        </label>
+
+        <label for="Colonia">
+          Colonia:
+          <br />
+          <input
+            type="text"
+            name="Colonia"
+            id="Colonia"
+            placeholder="Colonia"
+          />
+        </label>
+
+        <label for="correo">
+          Correo:
+          <span>*</span>
+          <br />
+          <input type="email" name="correo" id="correo" placeholder="Correo" required/>
+        </label>
+
+        <label for="Codigo_Postal">
+          Codigo Postal:
+          <br />
+          <input
+            type="text"
+            name="Codigo_Postal"
+            id="Codigo_Postal"
+            placeholder="Codigo Postal"
+          />
+        </label>
+
+        <label for="RFC">
+          RFC:
+          <span>*</span>
+          <br />
+          <input type="text" name="RFC" id="RFC" placeholder="RFC" required/>
+        </label>
+
+        <label for="fecha_de_venta">
+          Fecha de Venta:
+          <br />
+          <input
+            type="date"
+            name="fecha_de_venta"
+            id="fecha_de_venta"
+            placeholder="Fecha de Venta"
+          />
+        </label>
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Datos del articulo adquirido</legend>
+
+        <label for="tipo">
+          Tipo:
+          <br />
+          <select name="tipo" id="tipo">
+            <option value="vestido">Vestido</option>
+            <option value="falda">Falda</option>
+            <option value="pantalon">Pantalón</option>
+            <option value="playera">Playera</option>
+            <option value="camisa">Camisa</option>
+          </select>
+        </label>
+
+        <label for="tipo">
+          Tipo:
+          <br />
+          <!-- Choose from radio button -->
+          <input type="radio" name="tipo" id="tipo" value="chico" /> Chico
+          <input type="radio" name="tipo" id="tipo" value="mediano" /> Mediano
+          <input type="radio" name="tipo" id="tipo" value="grande" /> Grande
+        </label>
+
+        <label for="color">
+          Color:
+          <br />
+          <input type="color" name="color" id="color" placeholder="Color" />
+        </label>
+      </fieldset>
+
+      <div class="form_actions">
+        <input type="submit" value="Enviar Datos" />
+        <input type="reset" value="Borrar Datos" />
+      </div>
+    </form>
+  </body>
+</html>
