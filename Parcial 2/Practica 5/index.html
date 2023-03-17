@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practica 5</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <h1>Servicios de Internet y Telefonía</h1>
+    <h2>Contrato de Servicios</h2>
+
+    <form>
+      <fieldset>
+        <legend>Datos del Cliente</legend>
+
+        <label for="nombre">
+          Nombre:
+          <input type="text" name="nombre" id="nombre" required />
+        </label>
+
+        <label for="apellido_paterno">
+          Apellido Paterno:
+          <input
+            type="text"
+            name="apellido_paterno"
+            id="apellido_paterno"
+            required
+          />
+        </label>
+
+        <label for="apellido_materno">
+          Apellido Materno:
+          <input
+            type="text"
+            name="apellido_materno"
+            id="apellido_materno"
+            required
+          />
+        </label>
+
+        <label for="ciudad">
+          Ciudad:
+          <select name="ciudad" id="ciudad" required>
+            <option value="Aguascalientes">Aguascalientes</option>
+            <option value="Baja California">Baja California</option>
+            <option value="Baja California Sur">Baja California Sur</option>
+            <option value="Campeche">Campeche</option>
+            <option value="Chiapas">Chiapas</option>
+            <option value="Chihuahua">Chihuahua</option>
+            <option value="Coahuila">Coahuila</option>
+            <option value="Colima">Colima</option>
+            <option value="Distrito Federal">Distrito Federal</option>
+            <option value="Durango">Durango</option>
+            <option value="Estado de México">Estado de México</option>
+            <option value="Guanajuato">Guanajuato</option>
+            <option value="Guerrero">Guerrero</option>
+            <option value="Hidalgo">Hidalgo</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="Michoacán">Michoacán</option>
+            <option value="Morelos">Morelos</option>
+            <option value="Nayarit">Nayarit</option>
+            <option value="Nuevo León">Nuevo León</option>
+            <option value="Oaxaca">Oaxaca</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Querétaro">Querétaro</option>
+            <option value="Quintana Roo">Quintana Roo</option>
+            <option value="San Luis Potosí">San Luis Potosí</option>
+            <option value="Sinaloa">Sinaloa</option>
+            <option value="Sonora">Sonora</option>
+            <option value="Tabasco">Tabasco</option>
+            <option value="Tamaulipas">Tamaulipas</option>
+            <option value="Tlaxcala">Tlaxcala</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Yucatán">Yucatán</option>
+          </select>
+        </label>
+      </fieldset>
+    </form>
+
+    <form>
+      <fieldset>
+        <legend>Servicios a Contratar</legend>
+        Selecciona el tipo de servicio a contratar:
+        <br>
+        <label for="servicios">
+            Línea Telefónica
+            <input type="checkbox" name="servicio" id="servicio" value="Internet" />
+            Servicio de Internet
+            <input type="checkbox" name="servicio" id="servicio" value="Internet" />
+        </label>
+
+      </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>
+                Forma de Pago
+            </legend>
+
+            Elije la forma de pago
+
+            <br>
+            
+            <label for="forma_de_pago">
+                Efectivo
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Efectivo" />
+
+                <br>
+
+                Tarjeta de Crédito
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Tarjeta de Crédito" />
+
+                <br>
+
+                Tarjeta de Débito
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Tarjeta de Débito" />
+
+                <br>
+
+                Cheque
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Cheque" />
+
+                <br>
+
+                Transferencia Bancaria
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Transferencia Bancaria" />
+
+                <br>
+
+                Depósito Bancario
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Depósito Bancario" />
+
+                <br>
+
+                Pago en OXXO
+                <input type="radio" name="forma_de_pago" id="forma_de_pago" value="Pago en OXXO" />
+            </label>
+        </fieldset>
+    </form>
+
+    <div class="form_actions">
+        <input type="submit" value="Enviar Datos" />
+        <input type="reset" value="Borrar Datos" />
+      </div>
+
+    <h2>Práctica 5</h2>
+    <h3>HTML y CSS</h3>
+    <h3>Primavera 2023</h3>
+
+  </body>
+</html>
