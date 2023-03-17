@@ -1,0 +1,42 @@
+#titulo1{
+    color: #000;
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.titulo{
+    color: #2cff95;
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+p:nth-child(even) {
+    color: #2cff95;
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+P:first-child{
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}

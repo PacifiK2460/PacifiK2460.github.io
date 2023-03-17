@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(234, 255, 227);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: rgb(8, 20, 252);
+    font-style: italic;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(149, 63, 161);
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+#uno p {
+    color: rgb(161, 204, 146);
+    font-style: italic;
+    font-weight: bold;
+}
+
+#dos a h2{
+    color: rgb(149, 63, 161);
+    font-style: italic;
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: decimal;
+}
