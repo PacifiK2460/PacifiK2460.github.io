@@ -1,0 +1,79 @@
+.body {
+  /*
+     Background image: https://a.travel-assets.com/findyours-php/viewfinder/images/res70/34000/34135-Cozumel.jpg
+    */
+
+  background-image: url("img/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-image: url("img/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+#title {
+  position: absolute;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Schoolbell", cursive;
+  top: 0px;
+  right: 0px;
+  margin: 10px;
+}
+
+#menu {
+  position: absolute;
+  background-color: rgb(36, 32, 255);
+  border: 1px solid black;
+  font-family: "Schoolbell", cursive;
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+}
+
+#menu-title {
+  font-family: "Indie Flower", cursive;
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.menu-option {
+  display: none;
+}
+
+#menu:hover {
+  background-color: rgb(0, 255, 242);
+}
+
+#menu:hover #menu-title {
+  color: black;
+}
+
+#menu:hover .menu-option {
+  display: block;
+  background-color: rgb(233, 233, 233);
+  margin: 0;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#menu:hover .menu-option:hover {
+  background-color: rgba(13, 81, 158, 0.336);
+  cursor: grab;
+}
