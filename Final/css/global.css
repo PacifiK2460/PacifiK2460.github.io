@@ -1,0 +1,41 @@
+nav ul li img{
+    width: 30px;
+    /* Center image vertically and horizontally */
+    display: block;
+    text-align: center;
+}
+
+#header-logo{
+    vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #e4afaf;
+}
+
+.active {
+  background-color: #04aa6d;
+}

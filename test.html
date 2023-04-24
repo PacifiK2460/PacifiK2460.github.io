@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Test</title>
     <link rel="stylesheet" href="estilos.css" />
+    <script type = "text/javascript" src="test.js"></script>  
+
   </head>
 
   <style>
@@ -16,9 +18,6 @@
     }
   </style>
 
-  <script>
-    windwo.alert("Hola");
-  </script>
 
   <body>
     <h1 style="color: aqua">Test</h1>
@@ -201,5 +200,15 @@
     <div id="ID4">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis, perferendis corporis accusamus a sint ad, doloribus iusto itaque labore quia doloremque quidem atque aliquam id totam cum consequatur harum.
     </div>
+
+    <button id="btn1" onclick=saludar()>Saludar</button>
+
+
+    <form>
+      <input id="nombre" type="text" name="nombre" value="" placeholder="Nombre">
+      <input id="apellido" type="text" name="apellido" value="" placeholder="Apellido">
+      <input id="edad" type="text" name="edad" value="" placeholder="Edad">
+      <input type="submit" name="enviar" value="Enviar" onclick="info()">
+    </form>
 
 </html>
