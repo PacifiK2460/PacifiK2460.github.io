@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practica 4</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <script>
+      function generarRFC() {
+        // El RFC se genera de la siguiente manera:
+        // La primera letra del apellido paterno
+        // Las primeras dos letras del apellido materno
+        // La primera letra del nombre
+        // Los ultimos dos digitos del año de nacimiento
+        // Los dos digitos del mes de nacimiento
+        // Los dos digitos del dia de nacimiento
+
+        // El resultado se debe de mostrar en el field de "rfc"
+
+        var nombre = document.getElementById("nombre").value;
+        var apellidoP = document.getElementById("apellidoP").value;
+        var apellidoM = document.getElementById("apellidoM").value;
+        var fechaNac = document.getElementById("fechaNac").value;
+
+        var nombreSplit = nombre.split(" ");
+        var apellidoPSplit = apellidoP.split(" ");
+        var apellidoMSplit = apellidoM.split(" ");
+
+        var rfc =
+          apellidoP.charAt(0) +
+          apellidoP.charAt(1) +
+          apellidoM.charAt(0) +
+          nombre.charAt(0) +
+          fechaNac.charAt(2) +
+          fechaNac.charAt(3) +
+          fechaNac.charAt(5) +
+          fechaNac.charAt(6) +
+          fechaNac.charAt(8) +
+          fechaNac.charAt(9);
+
+        document.getElementById("rfc").value = rfc.toUpperCase();
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Formulario que pregunta: nombre, apellido paterno, apellido materno, fecha de nacimiento; ademas de incluir un boton "Generar RFC" y un field para el resultado -->
+
+    <fieldset>
+      <legend>Generador de RFC</legend>
+      <label for="nombre">Nombre(s):</label>
+      <input type="text" name="nombre" id="nombre" required />
+      <br />
+      <label for="apellidoP">Apellido Paterno:</label>
+      <input type="text" name="apellidoP" id="apellidoP" required />
+      <br />
+      <label for="apellidoM">Apellido Materno:</label>
+      <input type="text" name="apellidoM" id="apellidoM" required />
+      <br />
+      <label for="fechaNac">Fecha de Nacimiento:</label>
+      <input type="date" name="fechaNac" id="fechaNac" required />
+      <br />
+      <button onclick="generarRFC()">Generar RFC</button>
+      <br />
+      <label for="rfc">RFC:</label>
+      <input type="text" name="rfc" id="rfc" readonly />
+    </fieldset>
+  </body>
+</html>
