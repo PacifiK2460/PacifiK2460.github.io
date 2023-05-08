@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exposición</title>
+    </head>
+    <body>
+        <script>
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position){
+                    alert("Tu latitud es: " + position.coords.latitude);
+                    alert("Tu longitud es: " + position.coords.longitude);
+                });
+            }
+            else{
+                alert("No se pudo obtener la ubicación");
+            }
+        </script>
+
+        <h1>
+            GPS
+        </h1>
+    </body>
+</html>
