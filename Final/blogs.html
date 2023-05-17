@@ -28,7 +28,7 @@
             <a class="nav-center-content" href="faq.html">FAQ</a>
         </div>
         <div id="nav-right">
-            <a class="nav-right" href="registro.html">Contactanos</a>
+            <a class="nav-right" href="contacto.html">Contactanos</a>
         </div>
     </nav>
 
@@ -69,8 +69,6 @@
 
 </body>
 </div>
-
-
 
 <script type="text/javascript">
     var vsid = "si2542450cbe6d8";
@@ -130,11 +128,9 @@
         blogCard.appendChild(blogDescription);
         blogsDiv.appendChild(blogCard);
 
-        // Set the href of the whole card to the blog page without the gradient
-        // Remove gradient from object
-        delete blog.gradient;
 
-        blogCard.href = "blog.html?" + JSON.stringify(blog);
+        // Set href to the index of the blog
+        blogCard.href = "blogs/" + blogs.indexOf(blog) + ".html";
 
     });
 

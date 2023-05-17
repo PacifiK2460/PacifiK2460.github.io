@@ -1,10 +1,174 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>[PROYECTO FINAL]</title>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" href="favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="index.html">Inicio</a>
+            <a class="nav-center-content" href="blogs.html">Blog</a>
+            <a class="nav-center-content" href="faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="contacto.html">Contactanos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div id="content-background">
+
+        </div>
+
+        <div class="informacion" style="padding: 20px;">
+            <h1 class="h1-center">
+                Respondiendo cada duda <br> un Bite a la vez
+            </h1>
+            <p class="subtitle">
+                En esta sección encontrarás las preguntas más frecuentes que nos hacen nuestros clientes.
+            </p>
+        </div>
+
+
+        <div class="preguntas">
+            <div class="pregunta">
+                <details>
+                    <summary>
+                        ¿Qué es Bite?
+                    </summary>
+                    <p>
+                        Bite es una empresa que se dedica a la venta de comida rápida, con un servicio de entrega a
+                        domicilio.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el horario de atención?
+                    </summary>
+                    <p>
+                        Nuestro horario de atención es de 9:00 am a 9:00 pm.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el tiempo de entrega?
+                    </summary>
+                    <p>
+                        El tiempo de entrega es de 30 a 45 minutos.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el costo de envío?
+                    </summary>
+                    <p>
+                        El costo de envío es de $50.00 MXN.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el costo mínimo de compra?
+                    </summary>
+                    <p>
+                        El costo mínimo de compra es de $100.00 MXN.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el costo de envío?
+                    </summary>
+                    <p>
+                        El costo de envío es de $50.00 MXN.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        ¿Cuál es el costo mínimo de compra?
+                    </summary>
+                    <p>
+                        El costo mínimo de compra es de $100.00 MXN.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-background"></div>
+        <div id="footer-info">
+            <div>
+                <img src="favico.ico">
+            </div>
+            <div>
+                <h4>
+                    Autor
+                </h4>
+                <p>
+                    Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</div>
+
+<script>
+    // Take every "historia" id, take every h2 and paste the text inside the h2 in the "sections" sidebar
+    var historia = document.getElementById("elementos");
+    var h2 = historia.getElementsByTagName("h2");
+    var sections = document.getElementById("sections");
+    var ul = sections.getElementsByTagName("ul")[0];
+    for (var i = 0; i < h2.length; i++) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", "#" + h2[i].innerHTML.toLowerCase());
+        a.innerHTML = h2[i].innerHTML;
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+
+    // To every h2 add an id with the text inside the h2
+    for (var i = 0; i < h2.length; i++) {
+        h2[i].setAttribute("id", h2[i].innerHTML.toLowerCase());
+    }
+
+</script>
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+
 </html>

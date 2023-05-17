@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/mhtml2html@3.0.0" type="javascript"></script>
+
+    <script>
+        async function getBlog(url) {
+            // Open html file that is named with the same name as the blog
+            let response = await fetch("blogs/" + url + ".mhtml");
+            let data = await response.text();
+
+            // Parse as html
+            import("https://unpkg.com/mhtml2html@3.0.0");
+            let html = mhtml2html(data);
+            console.log(html)
+
+        }
+    </script>
+
+    <script>
+        function newcomment() {
+            console.log("Commenting");
+            // Get the text from the comment
+            let comment = document.querySelector("input[name='comment']").value;
+
+            if (comment == "") {
+                return;
+            }
+
+            // Create a new div
+            let newDiv = document.createElement("div");
+            // Set the class of the div
+            newDiv.className = "comment";
+            // Set the inner html of the div
+            newDiv.innerHTML = `
+            <div class="comment-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="comment-info">
+                <div class="comment-name">
+                    <h3>Visitante Anonimo</h3>
+                </div>
+                <div class="comment-content">
+                    <p>${comment}</p>
+                </div>
+            </div>
+        `;
+            // Append the new div to the comments div
+            document.querySelector(".blog-comments").appendChild(newDiv);
+
+            // Clear the input
+            document.querySelector("input[name='comment']").value = "";
+
+            // Save the comment to local storage
+            saveComment(comment);
+        }
+    </script>
+
+    <script>
+        function saveComment(comment) {
+            // Get the comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // If there are no comments, create a new array
+            if (comments == null) {
+                comments = [];
+            }
+
+            // Add the new comment to the array
+            comments.push({ comment: comment });
+
+            // Save the comments to local storage
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
+    </script>
+
+    <script>
+        function loadComments() {
+            // Load comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // Post comments
+            for (let i = 0; i < comments.length; i++) {
+                // Create a new div
+                let newDiv = document.createElement("div");
+                // Set the class of the div
+                newDiv.className = "comment";
+                // Set the inner html of the div
+                newDiv.innerHTML = `
+                <div class="comment-icon">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                </div>
+                <div class="comment-info">
+                    <div class="comment-name">
+                        <h3>Visitante Anonimo</h3>
+                    </div>
+                    <div class="comment-content">
+                        <p>${comments[i].comment}</p>
+                    </div>
+                </div>
+            `;
+                // Append the new div to the comments div
+                document.querySelector(".blog-comments").appendChild(newDiv);
+            }
+        }
+
+        window.onload = loadComments;
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="../index.html">Inicio</a>
+            <a class="nav-center-content" href="../blogs.html">Blog</a>
+            <a class="nav-center-content" href="../faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="../contacto.html">Contactanos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div id="content-background"></div>
+
+        <div class="blog-landing">
+            <div class="blog-heading">
+                <img src="https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?s=612x612&w=0&k=20&c=nHMypkMTU1HUUW85Zt0Ff7MDbq17n0eVeXaoM9Knt4Q="
+                    alt="">
+                <h1 class="h1-center">Por qué necesitamos más mujeres trabajando, sobre todo en tecnología
+
+                </h1>
+            </div>
+            <p class="subtitle">5 razones que recordar en el Día Internacional de los Trabajadores
+            </p>
+        </div>
+
+        <div class="author">
+            <div class="author-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="author-info">
+                <div class="author-name">
+                    <h3>Gonzalo Parra</h3>
+                </div>
+                <div class="author-location">
+                    <p>Medium</p>
+                </div>
+            </div>
+            <div class="author-published">
+                <p>May 1, 2018</p>
+            </div>
+        </div>
+
+        <div class="blog-content">
+
+            <div class="blog-text">
+                <p>Hoy 1º de Mayo de 2018 se celebra el Día Internacional de los Trabajadores. Se celebra desde 1889 y
+                    sin embargo, 129 años después, muchísimas mujeres aún no son parte de esta celebración. Y esto no es
+                    un problema únicamente de generaciones pasadas. Sigue siendo un problema de la juventud actual, de
+                    los Millennials, los Generación Z, o como los queramos llamar.
+
+                </p>
+
+                <p>Según la La Organización para la Cooperación y el Desarrollo Económico​ (OCDE), 30% de las mujeres de
+                    15 a 29 años en América Latina no estudian ni trabajan, mientras que este porcentaje es del 11% en
+                    los hombres. Además, la gran mayoría de las mujeres que deciden trabajar terminan en el mercado
+                    informal o en oficios poco remunerados, mientras que los hombres tienden a ocupar trabajos con mejor
+                    remuneración. Esta es la principal causa de la brecha de género salarial, que llega a ser de un 32%
+                    en México. (Esto quiere decir que las mujeres que trabajan ganan en promedio 32% menos que los
+                    hombres, a pesar de tener un nivel de estudios similar).
+
+                </p>
+
+                <p>De hecho, muchos creen que la solución es que las mujeres estudien más, y aunque esto es un gran
+                    paso, no garantiza que las puertas se abran a un trabajo y futuro soñado para las mujeres. Hoy en
+                    día ya hay más mujeres que hombres estudiando en la Universidad. Por cada 100 jóvenes en la región,
+                    16 tienen estudios universitarios completos (9 mujeres y 7 hombres) y 14 tienen estudios
+                    universitarios truncados (8 mujeres y 6 hombres). Sin embargo, en el mismo estudio de la OCDE donde
+                    se comparten estas cifras, también se indica que tan solo un 18% de las mujeres que estudian termina
+                    trabajando en el mercado formal.
+
+                </p>
+
+                <p>
+                    Todos estos números se resumen en un gran problema: América Latina está llena de mujeres talentosas
+                    limitando su potencial. Este es el primer punto de mi lista de 5 razones por las que necesitamos más
+                    mujeres trabajando en la región (y sobre todo en tecnología):
+
+
+                </p>
+
+                <p>
+                    Millones de mujeres están limitando su potencial. Son muchísimas las mujeres en América Latina que
+                    se encuentran en “un molde que les queda pequeño”. Este molde puede ser la educación de baja calidad
+                    a la cual pudieron acceder o el trabajo de poco crecimiento profesional que pudieron encontrar. Sea
+                    cual sea el caso, millones de mujeres no encajan en estos moldes, porque tienen talento para mucho
+                    más. Simplemente les ha faltado una oportunidad de calidad para mostrarlo. Muchas mujeres en esta
+                    situación aspiran a más y algunos familiares y amigos a veces las tildan de “locas” por ser tan
+                    soñadoras. Sin embargo, es justo esa ambición la que las lleva a lugares como Laboratoria, donde al
+                    entrar se dan cuenta que hay muchas “locas” como ellas y muchos espacios que llenar en moldes más
+                    grandes. En Laboratoria hemos visto pasar esta historia cientos de veces. Tenemos egresadas que
+                    ahora están creando productos digitales en las mejores empresas de la región, pero que antes estaban
+                    trabajando en lugares como call centers, peluquerías, bares, cadenas de comida rápida o mercados,
+                    ganando menos de $250 dólares al mes en promedio, cuando obviamente tenían potencial para muchísimo
+                    más.
+
+                </p>
+
+                <p>Las mujeres que no trabajan o tienen vulnerabilidad económica dependen de otros; y esta dependencia
+                    es muy riesgosa. La dependencia económica desempodera a la mujer. De hecho, la principal causa de
+                    permanencia en violencia doméstica es la falta de independencia económica. Incluso en hogares sin
+                    violencia, una mujer que depende de su pareja económicamente vive ante un riesgo constante de perder
+                    el apoyo que necesita para su futuro y el de sus hijos. Tristemente, son muchos los hogares donde la
+                    pareja desaparece, por querer cambiar de vida o por alguna inevitable tragedia. Ante esta situación
+                    la mujer que busca reactivarse laboralmente, le cuesta mucho hacerlo, pues el mercado no valora su
+                    época de “inactividad”.(Lo pongo entre comillas porque no hay nada más activo que cuidar a niños. Lo
+                    sabemos mi esposo y yo por experiencia propia). A Laboratoria llegan todo tipo de mujeres. Algunas
+                    tienen un apoyo inmenso de su pareja y eso es un factor determinante para su éxito en el programa.
+                    Yo personalmente he conocido a varios padres feministas, que se dedican a cuidar a sus hijos para
+                    que sus parejas puedan estudiar de forma intensa en Laboratoria y trabajar al graduarse del
+                    programa. Pero también he presenciado historias en el otro extremo, casos de hombres violentos que
+                    sus parejas los han dejado atrás, gracias a la nueva vida, al nuevo trabajo y las nuevas amigas que
+                    consiguen en Laboratoria.
+                </p>
+
+                <p>Los países necesitan más mujeres trabajadoras para mejorar su economía. El impulso económico que
+                    tiene la entrada de las mujeres a la fuerza laboral es un hecho muy estudiado. De hecho existe un
+                    término llamado “Womenomics”, que se refiere a este tema. Imagínense que se ha estimado que la
+                    disminución de la brecha existente entre mujeres y hombres en el mercado laboral podría añadir un
+                    12% al producto interno bruto de los países de la OCDE. Yo no soy economista, pero me atrevo a decir
+                    que no existe otro recurso con tal potencial de impacto en el crecimiento económico de la región.
+                </p>
+
+                <p>Especialmente el mercado tecnológico necesita más mujeres para ser más inclusivo e innovador. Muchas
+                    veces los medios nos hacen una pregunta absurda a los líderes de Laboratoria. Nos preguntan: “¿por
+                    qué las empresas no quieren contratar a mujeres?”, como buscando el villano de la historia. Y esa
+                    pregunta no tiene respuesta, pues no hay ningún villano que buscar. La gran mayoría de las empresas
+                    quieren y buscan mujeres para sus equipos de desarrollo tecnológico. El problema es que no las
+                    consiguen. Hay innumerables ejemplos del efecto positivo de la diversidad en los equipos de
+                    innovación. Uno que vemos pasar continuamente en Laboratoria es el éxito en hackathones de los
+                    equipos que combinan talento de Laboratoria, con talento de otras instituciones. Justo esta semana,
+                    un equipo conformado por 3 egresadas de Laboratoria (Mery, Maia y Maythe) y un ingeniero civil,
+                    ganaron la @adaptaton nacional contra el cambio climático. Su producto fue una aplicación que
+                    permite ubicar a familiares y amigos en situaciones de desastres naturales y visibilizar las zonas
+                    afectadas en tiempo real.
+                </p>
+
+                <div class="gallery">
+                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*E2Waf1LnxO6DVTawOpxb9Q.png"
+                        alt="">
+                </div>
+
+                <p>En Laboratoria creemos que hay un gran efecto positivo entre la inclusión y la innovación digital.
+                    Por eso identificamos a mujeres con mucho potencial, que no han podido acceder a educación de
+                    calidad, y las formamos para trabajar en empresas innovando en digital. Las empresas reciben de
+                    Laboratoria ese talento diverso que tanto necesitan y también obtienen formación corporativa para
+                    acelerar su transformación digital. Mientras más mujeres colocamos en empresas, o mientras más
+                    líderes corporativos capacitamos, más innovación se genera, y más puestos de trabajo se abren. Así,
+                    más mujeres reciben la oportunidad de hacer carrera en el mundo tecnológico, el cual se vuelve más
+                    inclusivo e innovador con su talento. En Laboratoria ya hemos visto pasar este ciclo positivo
+                    cientos de veces. Es un ciclo en el que todos ganan.
+
+                </p>
+
+                <div class="gallery">
+                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*4QEn7rvh-hEliZ5snqA2Mw.png"
+                        alt="">
+                </div>
+
+                <p>5. Las mujeres ganan mucho estando en el mundo tecnológico. Las mujeres que deciden entregar su
+                    talento al mundo de la tecnología reciben mucho a cambio. Para empezar, los salarios son mucho más
+                    altos en este rubro. En Laboratoria ya hemos graduado a más de 800 egresadas en nuestro bootcamp de
+                    6 meses (en front-end development y UX design) y nuestra última tasa de colocación laboral regional
+                    fue del 80%, con egresadas que triplicaron sus ingresos con los puestos que consiguieron al salir
+                    del bootcamp. El salario promedio de una egresada de Laboratoria ya ronda los $800 dólares en las
+                    últimas promociones, el cual es tan solo su punto de partida en su carrera en el mundo tech. Y el
+                    salario no lo es todo. Al entrar al rubro tecnológico las mujeres descubren un nuevo mundo, que
+                    necesita y valora su talento. Un mundo donde tienen un “poder mágico” para crear software que
+                    solucione los problemas que existen en su entorno, lo cual es extremadamente gratificante. Esto
+                    justo lo mencionaba Rosalva Gallardo, una peruana que trabajan en Google, en una entrevista que le
+                    hice recientemente. Pilar Figueroa es otro ejemplo de una mujer que transformó su vida al entrar al
+                    sector tech. Ella es egresada de nuestro programa en México y ahora trabaja en una fábrica de
+                    software de California llamada Crowdbotics, donde gana en dólares y trabaja de forma remota junto a
+                    más de 200 compañeros alrededor del mundo. Pilar ama su trabajo y su nuevo estilo de vida, donde se
+                    le han abierto grandes oportunidades que ha sabido aprovechar. Recientemente en Laboratoria abrimos
+                    un concurso para todas las egresadas, buscando escoger quien nos representara en el “Mobile Learning
+                    Week” organizado por la Unesco en París, Francia. ¡Pilar fue la ganadora! Hace tan solo unas semanas
+                    nos representó a lo alto en este evento, dando una conferencia y siendo parte de un panel, ante una
+                    audiencia global conformada por líderes en tecnología e impacto de muchísimos países. Además, pudo
+                    conocer París y varias ciudades de Europa.
+
+                </p>
+
+                <div class="gallery">
+                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*awmwxx4VkkKXlNd-LfXH7A.png"
+                        alt="">
+                </div>
+
+                <p>Los invito a todos a celebrar este 1º de Mayo de 2018 invitando a más mujeres a hacer carrera en
+                    tecnología. Si conoces a alguien que quiera postular a Laboratoria, invítalas a hacerlo aquí. La
+                    convocatoria para nuestra próxima generación que empieza en Mayo aún está abierta en Ciudad de
+                    México. Para el resto de las ciudades se pueden dejar los datos igual y las llamaremos cuando se
+                    vuelva a abrir convocatoria en unos meses.
+
+                </p>
+            </div>
+
+        </div>
+        <div class="blog-comments">
+
+
+        </div>
+        <div class="newComment" style="width: 100%;">
+            <div id="contactForm">
+                <div id="signForm">
+                    <div id="signcontent">
+                        <h1>Deja un legado en esta comunidad</h1>
+                        <h2>Acercate con quienes mas aprecias y deja un comentario publico.</h2>
+                        <form name="subscribe">
+                            <input type="text" name="comment" placeholder="Un comentario agradable" required>
+                            <input type="button" value="Comentar" onclick="newcomment()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer-background"></div>
+            <div id="footer-info">
+                <div>
+                    <img src="../favico.ico">
+                </div>
+                <div>
+                    <h4>
+                        Autor
+                    </h4>
+                    <p>
+                        Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</div>
+
+
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+<script>
+    let queryString = window.location.search;
+    // From URL string to normal string
+    queryString = decodeURIComponent(queryString);
+    // Remove the ? character
+    queryString = queryString.substring(1);
+    let data = JSON.parse(queryString);
+
+    // Set blog title to the title of the blog
+    document.querySelector(".h1-center").innerHTML = data.titulo;
+    // Set blog subtitle to the subtitle of the blog
+    document.querySelector(".subtitle").innerHTML = data.descripcion;
+
+    getBlog(data.titulo)
+
+</script>
+
+
+</html>

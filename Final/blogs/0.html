@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/mhtml2html@3.0.0" type="javascript"></script>
+
+    <script>
+        async function getBlog(url) {
+            // Open html file that is named with the same name as the blog
+            let response = await fetch("blogs/" + url + ".mhtml");
+            let data = await response.text();
+
+            // Parse as html
+            import("https://unpkg.com/mhtml2html@3.0.0");
+            let html = mhtml2html(data);
+            console.log(html)
+
+        }
+    </script>
+
+    <script>
+        function newcomment() {
+            console.log("Commenting");
+            // Get the text from the comment
+            let comment = document.querySelector("input[name='comment']").value;
+
+            if (comment == "") {
+                return;
+            }
+
+            // Create a new div
+            let newDiv = document.createElement("div");
+            // Set the class of the div
+            newDiv.className = "comment";
+            // Set the inner html of the div
+            newDiv.innerHTML = `
+            <div class="comment-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="comment-info">
+                <div class="comment-name">
+                    <h3>Visitante Anonimo</h3>
+                </div>
+                <div class="comment-content">
+                    <p>${comment}</p>
+                </div>
+            </div>
+        `;
+            // Append the new div to the comments div
+            document.querySelector(".blog-comments").appendChild(newDiv);
+
+            // Clear the input
+            document.querySelector("input[name='comment']").value = "";
+
+            // Save the comment to local storage
+            saveComment(comment);
+        }
+    </script>
+
+    <script>
+        function saveComment(comment) {
+            // Get the comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // If there are no comments, create a new array
+            if (comments == null) {
+                comments = [];
+            }
+
+            // Add the new comment to the array
+            comments.push({ comment: comment });
+
+            // Save the comments to local storage
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
+    </script>
+
+    <script>
+        function loadComments() {
+            // Load comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // Post comments
+            for (let i = 0; i < comments.length; i++) {
+                // Create a new div
+                let newDiv = document.createElement("div");
+                // Set the class of the div
+                newDiv.className = "comment";
+                // Set the inner html of the div
+                newDiv.innerHTML = `
+                <div class="comment-icon">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                </div>
+                <div class="comment-info">
+                    <div class="comment-name">
+                        <h3>Visitante Anonimo</h3>
+                    </div>
+                    <div class="comment-content">
+                        <p>${comments[i].comment}</p>
+                    </div>
+                </div>
+            `;
+                // Append the new div to the comments div
+                document.querySelector(".blog-comments").appendChild(newDiv);
+            }
+        }
+
+        window.onload = loadComments;
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="../index.html">Inicio</a>
+            <a class="nav-center-content" href="../blogs.html">Blog</a>
+            <a class="nav-center-content" href="../faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="../contacto.html">Contactanos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div id="content-background"></div>
+
+        <div class="blog-landing">
+            <div class="blog-heading">
+                <img src="https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?s=612x612&w=0&k=20&c=nHMypkMTU1HUUW85Zt0Ff7MDbq17n0eVeXaoM9Knt4Q="
+                    alt="">
+                <h1 class="h1-center">Educación en ciencias de la computación y el camino a la empleabilidad
+                </h1>
+            </div>
+            <p class="subtitle">Lo que me ha enseñado mi experiencia en Laboratoria y he aprendido de otras
+                organizaciones en el mundo.
+            </p>
+        </div>
+
+        <div class="author">
+            <div class="author-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="author-info">
+                <div class="author-name">
+                    <h3>Ana M Martinez Franklin</h3>
+                </div>
+                <div class="author-location">
+                    <p>Laboratoria</p>
+                </div>
+            </div>
+            <div class="author-published">
+                <p>Oct 7, 2016</p>
+            </div>
+        </div>
+
+        <div class="blog-content">
+
+            <div class="blog-text">
+                <p>Hace ya varios días fui al Microsoft Youth Spark summit en Redmond, EEUU y tuve el privilegio de
+                    hablar en un panel sobre Laboratoria y nuestro “bootcamp” de 6 meses en Perú, México y Chile, donde
+                    enseñamos desarrollo web y desarrollo personal a mujeres jóvenes de bajos ingresos y las conectamos
+                    con trabajos al final del programa. En el evento de dos días, pude conocer a muchísima gente;
+                    emprendedores y líderes que están ejecutando proyectos increíbles en todas partes del mundo, para
+                    educar a niños y jóvenes sobre las ciencias de la computación. Muchos esfuerzos estaban enfocados en
+                    mujeres y en jóvenes con limitaciones económicas, como es el caso de Laboratoria.
+                </p>
+
+                <p>La gran pregunta que me tocó contestar junto a los otros panelistas fue“¿Qué se requiere para que
+                    jóvenes con limitaciones económicas, puedan seguir un camino de la educación al trabajo en el sector
+                    digital?” La pregunta tiene muchísimo sentido, pues “aprender para trabajar en tech” puede generar
+                    movilidad social para millones de jóvenes en el mundo.
+
+                </p>
+
+                <p>
+                    En este blog quiero compartir las ideas que conversamos en el panel y en grupos de discusión después
+                    del panel. Lo que escribo puede servir como punta de partida para crear este “camino de la educación
+                    al trabajo en el sector digital”, con acciones que podemos empezar a ejecutar mañana. Mi propuesta
+                    va a sonar simplista. Se que estamos enfrentando problemas complejos, pero me gusta la idea de
+                    empezar con soluciones sencillas. Por algo hay que empezar.
+                </p>
+
+                <h2>Empecemos por el problema:</h2>
+
+                <p>De hecho hay 2 problemas que son globales. (Se que hay más de dos, pero les dije que iba a
+                    simplificar).
+
+                </p>
+
+                <p>1. Por un lado, hay una fuente inmensa de talento que no está siendo bien aprovechada. La gran
+                    mayoría de nuestros niños y jóvenes no tienen acceso a la tecnología y a educación en ciencias de la
+                    computación. Puede que muchos tengan una cuenta en facebook o un smartphone, pero no están
+                    aprendiendo bien a utilizar una computadora, a programar una computadora y a cómo apalancarse en
+                    tecnología para acceder a mejores trabajos en un futuro. Esto los está dejando fuera de la creciente
+                    economía digital, atrapados en trabajos tradicionales de baja paga, si es que llegan a conseguir
+                    trabajo.
+
+                </p>
+
+                <p>2. Por otra parte, en el mundo falta gente capacitada para tomar trabajos en tecnología. Según la
+                    Casa Blanca, hoy hay más de 500 mil trabajos en tecnología en EEUU que están quedando vacíos por
+                    falta de talento calificado para tomarlos. Esto está trayendo pérdidas para las empresas y está
+                    frenando la innovación. Tecnologías de la Información es la categoría ocupacional con más trabajos
+                    abiertos en EEUU y dos tercios de esos trabajos no están en el sector tech. Están en sectores tan
+                    diversos como agricultura, manufactura y medicina, donde se están automatizando los procesos y se
+                    están utilizando tecnologías para mejorar los servicios (Vean este video para conocer más ejemplos).
+                    Las innovaciones tecnológicas en diferentes sectores están surgiendo en EEUU y en todas partes del
+                    mundo y con ello, el mundo cada vez necesita menos gente que haga trabajos rutinarios y más gente
+                    que sepa decirle a las computadoras y los robots lo qué tienen que hacer. Particularmente se
+                    necesitan más mujeres trabajando en tecnología, pues son una minoría, a pesar de tener la misma
+                    capacidad que los hombres para realizar trabajos en tech. Las mujeres tienden a alejarse de carreras
+                    lucrativas en tecnología, por falta de interés o confianza y eso es algo que tenemos que cambiar.
+
+                </p>
+
+                <p>Para solucionar estos problemas necesitamos hacer masivo el acceso a educación y trabajo en
+                    tecnología, para jóvenes mujeres y hombres por igual. Es algo que le conviene a cada individuo, a
+                    los países y a el mundo en general.
+
+                </p>
+
+                <p>La solución ideal a estos problemas, involucra acciones importantes, como lograr que el gobierno
+                    establezca ciencias de la computación como una materia básica en todos los colegios, con un programa
+                    académico año a año como matemáticas tiene hoy. También se requiere mejorar la infraestructura de
+                    los colegios y capacitar a los profesores para poder enseñar ciencias de la computación. Además, se
+                    necesitan modelos más accesibles y eficientes de educación superior, que preparen a los jóvenes para
+                    trabajar en tecnología en corto tiempo y a bajo costo. Una carrera de 5 años en una universidad
+                    puede que no sea la mejor solución para responder a la alta y cambiante demanda del mercado
+                    tecnológico.
+
+                </p>
+
+                <p>Va a tomar muchísimo tiempo para que todo esto suceda a gran escala. Sin embargo, hay que empezar por
+                    algún lugar. Un buen punto de partida es apalancarse mejor en miles de esfuerzos que están
+                    sucediendo alrededor del mundo para incluir a más jóvenes y a más mujeres en el sector digital.
+                    Vienen de parte de emprendedores sociales, de ONGs, de fundaciones de empresas y a veces de los
+                    mismos gobiernos. Hay muchos esfuerzos, pero dispersos, y hay que integrarlos mejor.
+
+                </p>
+
+                <p>Tuve la oportunidad de conocer proyectos muy interesantes en el Microsoft Youth Spark Summit, como SC
+                    Unplugged en Nueva Zelanda, Code.org en EEUU, AppleSeeds en Israel, ZuptheCo en Francia, Coderdojo
+                    en Irlanda,Ladies learning code en Canada y muchísimos más. En Laboratoria no estamos solos. Hay
+                    muchos como nosotros y juntos sumamos más.
+
+                </p>
+
+            </div>
+
+        </div>
+        <div class="blog-comments">
+            <!-- <div class="comment">
+                <div class="comment-icon">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                </div>
+                <div class="comment-info">
+                    <div class="comment-name">
+                        <h3>{comment-name}</h3>
+                    </div>
+                    <div class="comment-content">
+                        <p>{comment-content}</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="newComment" style="width: 100%;">
+            <div id="contactForm">
+                <div id="signForm">
+                    <div id="signcontent">
+                        <h1>Deja un legado en esta comunidad</h1>
+                        <h2>Acercate con quienes mas aprecias y deja un comentario publico.</h2>
+                        <form name="subscribe">
+                            <input type="text" name="comment" placeholder="Un comentario agradable" required>
+                            <input type="button" value="Comentar" onclick="newcomment()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer-background"></div>
+            <div id="footer-info">
+                <div>
+                    <img src="../favico.ico">
+                </div>
+                <div>
+                    <h4>
+                        Autor
+                    </h4>
+                    <p>
+                        Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</div>
+
+
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+<script>
+    let queryString = window.location.search;
+    // From URL string to normal string
+    queryString = decodeURIComponent(queryString);
+    // Remove the ? character
+    queryString = queryString.substring(1);
+    let data = JSON.parse(queryString);
+
+    // Set blog title to the title of the blog
+    document.querySelector(".h1-center").innerHTML = data.titulo;
+    // Set blog subtitle to the subtitle of the blog
+    document.querySelector(".subtitle").innerHTML = data.descripcion;
+
+    getBlog(data.titulo)
+
+</script>
+
+
+</html>
