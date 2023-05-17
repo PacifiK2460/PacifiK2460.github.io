@@ -1,0 +1,25 @@
+[
+    {
+        "titulo": "Educación en ciencias de la computación y el camino a la empleabilidad",
+        "descripcion": "Lo que me ha enseñado mi experiencia en Laboratoria y he aprendido de otras organizaciones en el mundo.",
+        "gradient": "linear-gradient(90deg, #305569 0%, #0f0925 100%)"
+    },
+    {
+        "titulo": "Cómo dar feedback constructivo",
+        "descripcion": "5 sugerencias de gente experta, de mis errores y aprendizajes",
+        "gradient": "linear-gradient(90deg, #60375f 0%, #1b0512 100%)"
+    },
+    {
+        "titulo": "¿Qué es ser una UX Designer?",
+        "descripcion": "A diario nuestras estudiantes y nuestra comunidad nos preguntan qué es un UX Designer y qué hace esta persona. Simplificando, un UX Designer es un profesional que trabaja haciendo UX Design (duh). Entonces…",
+        "gradient": "linear-gradient(90deg, #376050 0%, #051b13 100%)"
+    },
+    {
+        "titulo": "Los distintos roles dentro del User Experience (UX)",
+        "descripcion": "Cuando queremos saber quién es o qué hace un User Experience (UX) Designer, una búsqueda en la web nos arroja una colección de cargos laborales o descripciones que van más allá de nuestra duda inicial y podrían llegar a confundirnos un poco."
+    },
+    {
+        "titulo": "Por qué necesitamos más mujeres trabajando, sobre todo en tecnología",
+        "descripcion": "5 razones que recordar en el Día Internacional de los Trabajadores"
+    }
+]

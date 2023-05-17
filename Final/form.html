@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    ></script>
+
+    <script>
+      function print() {
+        window.jsPDF = window.jspdf.jsPDF;
+        var doc = new jsPDF();
+        var elementHandler = {
+          "#ignorePDF": function (element, renderer) {
+            return true;
+          },
+        };
+        var source = window.document.getElementsByTagName("body")[0];
+        doc.html(source, {
+          'x': 15,
+          'y': 15,
+          'width': 180,
+          'elementHandlers': elementHandler,
+        });
+        doc.output("dataurlnewwindow");
+      }
+    </script>
+    <!-- Contact form that prints itself -->
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" name="name" id="name" required />
+      <br />
+      <label for="message">Mensaje:</label>
+      <textarea name="message" id="message" required></textarea>
+      <br />
+      <button onclick="print()">Imprimir</button>
+    </form>
+  </body>
+</html>
