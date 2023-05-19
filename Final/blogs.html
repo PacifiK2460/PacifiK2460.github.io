@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" href="favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="index.html">Inicio</a>
+            <a class="nav-center-content" href="blogs.html">Blog</a>
+            <a class="nav-center-content" href="faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="contacto.html">Contactanos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div id="content-background"></div>
+
+        <div class="blog-landing">
+            <div class="blog-heading">
+                <img src="https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?s=612x612&w=0&k=20&c=nHMypkMTU1HUUW85Zt0Ff7MDbq17n0eVeXaoM9Knt4Q="
+                    alt="">
+                <h1 class="h1-center">Bienvenido a nuestras entradas de Blog</h1>
+            </div>
+            <p class="subtitle">Aqui podras encontrar las mejores lecturas en cuento a las Ciencias de la Computación se
+                refiere</p>
+        </div>
+
+        <div id="blogs">
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer-background"></div>
+        <div id="footer-info">
+            <div>
+                <img src="favico.ico">
+            </div>
+            <div>
+                <h4>
+                    Autor
+                </h4>
+                <p>
+                    Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</div>
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+<script>
+    let blogs = [
+        {
+            "titulo": "Educación en ciencias de la computación y el camino a la empleabilidad",
+            "descripcion": "Lo que me ha enseñado mi experiencia en Laboratoria y he aprendido de otras organizaciones en el mundo.",
+            "gradient": "linear-gradient(90deg, #305569 0%, #0f0925 100%)",
+            "url": "https://medium.com/laboratoria/educaci%C3%B3n-en-ciencias-de-la-computaci%C3%B3n-y-el-camino-a-la-empleabilidad-1563795edb02"
+        },
+        {
+            "titulo": "Cómo dar feedback constructivo",
+            "descripcion": "5 sugerencias de gente experta, de mis errores y aprendizajes",
+            "gradient": "linear-gradient(90deg, #60375f 0%, #1b0512 100%)",
+            "url": "https://medium.com/@analaboratoria/revisi%C3%B3n-de-los-okrs-de-laboratoria-e90af01c9101"
+        },
+        {
+            "titulo": "Los distintos roles dentro del User Experience (UX)",
+            "descripcion": "Cuando queremos saber quién es o qué hace un User Experience (UX) Designer, una búsqueda en la web nos arroja una colección de cargos laborales o descripciones que van más allá de nuestra duda inicial y podrían llegar a confundirnos un poco.",
+            "gradient": "linear-gradient(90deg, #305569 0%, #0f0925 100%)",
+            "url": "https://medium.com/laboratoria/los-distintos-roles-dentro-del-user-experience-ux-601706d578aa"
+        },
+        {
+            "titulo": "Por qué necesitamos más mujeres trabajando, sobre todo en tecnología",
+            "descripcion": "5 razones que recordar en el Día Internacional de los Trabajadores",
+            "gradient": "linear-gradient(90deg, #60375f 0%, #1b0512 100%)",
+            "url": "https://medium.com/laboratoria/por-qu%C3%A9-que-necesitamos-m%C3%A1s-mujeres-trabajando-sobre-todo-en-tecnolog%C3%ADa-beb8d429892d"
+        }
+    ]
+    // Insert the blogs in the div with id blogs
+    let blogsDiv = document.getElementById("blogs");
+    blogs.forEach(blog => {
+        let blogCard = document.createElement("a");
+        blogCard.classList.add("blog-card");
+        blogCard.style.backgroundImage = blog.gradient;
+        let blogImg = document.createElement("img");
+        blogImg.src = "./favico.ico";
+        let blogTittle = document.createElement("div");
+        blogTittle.classList.add("blog-tittle");
+        blogTittle.innerHTML = blog.titulo;
+        let blogDescription = document.createElement("div");
+        blogDescription.classList.add("blog-description");
+        blogDescription.innerHTML = blog.descripcion;
+        blogCard.appendChild(blogImg);
+        blogCard.appendChild(blogTittle);
+        blogCard.appendChild(blogDescription);
+        blogsDiv.appendChild(blogCard);
+
+
+        // Set href to the index of the blog
+        blogCard.href = "blogs/" + blogs.indexOf(blog) + ".html";
+
+    });
+
+</script>
+
+
+</html>

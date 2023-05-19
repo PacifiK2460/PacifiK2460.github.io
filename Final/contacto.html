@@ -1,40 +1,139 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>[PROYECTO FINAL]</title>
 
-        <link rel="stylesheet" href="css/global.css" />
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="icon" href="favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+</head>
 
-        <nav>
-            <ul>
-                <li><img id="header-logo" src="images/logo.svg" alt="Logo" /></li>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li style="float:right"><a href="#about">About</a></li>
-              </ul>
-        </nav>
+<body>
 
-        <!-- Formulario de contacto -->
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="index.html">Inicio</a>
+            <a class="nav-center-content" href="blogs.html">Blog</a>
+            <a class="nav-center-content" href="faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="contacto.html">Contactanos</a>
+        </div>
+    </nav>
 
-        <h1>Formulario de contacto</h1>
-        <form action="enviar.php" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="required" />
-            <br />
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="Email" required="required" />
-            <br />
-            <label for="asunto">Asunto:</label>
-            <input type="text" name="asunto" id="asunto" placeholder="Asunto" required="required" />
-            <br />
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required="required"></textarea>
-            <br />
-            <input type="submit" value="Enviar" />
+    <div id="content">
+        <div id="content-background">
 
-    </body>
+        </div>
+
+        <div class="informacion" style="padding: 20px;">
+            <h1 class="h1-center">
+                Cualquier medio <br> en cualquier momento
+            </h1>
+            <p class="subtitle">
+                Si tienes alguna duda o sugerencia, no dudes en contactarnos, estamos para servirte.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="container-content">
+                <form action="/action_page.php">
+                    <label for="fname">Nombre</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Apellidos</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="country">Pais de Origen</label>
+                    <select id="country" name="country">
+                        <option value="mexico">Mexico</option>
+                        <option value="usa">EEUU</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                        <option value="japon">Japon</option>
+                        <option value="china">China</option>
+                        <option value="rusia">Rusia</option>
+                        <option value="alemania">Alemania</option>
+                        <option value="francia">Francia</option>
+                        <option value="españa">España</option>
+                        <option value="italia">Italia</option>
+                        <option value="argentina">Argentina</option>
+                    </select>
+
+                    <label for="subject">Observaciones</label>
+                    <textarea id="subject" name="subject" placeholder="Danos tu opinion.."
+                        style="height:200px"></textarea>
+
+                    <input type="button" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-background"></div>
+        <div id="footer-info">
+            <div>
+                <img src="favico.ico">
+            </div>
+            <div>
+                <h4>
+                    Autor
+                </h4>
+                <p>
+                    Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</div>
+
+<script>
+    // Take every "historia" id, take every h2 and paste the text inside the h2 in the "sections" sidebar
+    var historia = document.getElementById("elementos");
+    var h2 = historia.getElementsByTagName("h2");
+    var sections = document.getElementById("sections");
+    var ul = sections.getElementsByTagName("ul")[0];
+    for (var i = 0; i < h2.length; i++) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", "#" + h2[i].innerHTML.toLowerCase());
+        a.innerHTML = h2[i].innerHTML;
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+
+    // To every h2 add an id with the text inside the h2
+    for (var i = 0; i < h2.length; i++) {
+        h2[i].setAttribute("id", h2[i].innerHTML.toLowerCase());
+    }
+
+</script>
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+
 </html>

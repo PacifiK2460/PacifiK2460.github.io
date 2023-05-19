@@ -1,55 +1,447 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>[PROYECTO FINAL]</title>
-  </head>
 
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Inicio</a>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-        </li>
-        <li>
-          <a href="contacto.html">Contacto</a>
-        </li>
-        <li>
-          <a href="faq.html">FAQ</a>
-        </li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Proyecto Final" />
+  <title>[PROYECTO FINAL]</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="icon" href="favico.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <div id="landing">
-      <h1>Ciencias de la Computación</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex sint
-        aperiam a voluptate enim totam perspiciatis, placeat commodi iste, vero
-        dolorem expedita, reprehenderit molestias porro non eaque iusto eius
-        blanditiis?
+<body>
+
+  <nav>
+    <div id="nav-left">
+      <a class="nav-left-content" href="index.html">
+        <img src="favico.ico" alt="logo" />
+      </a>
+    </div>
+    <div id="nav-center">
+      <a class="nav-center-content" href="index.html">Inicio</a>
+      <a class="nav-center-content" href="blogs.html">Blog</a>
+      <a class="nav-center-content" href="faq.html">FAQ</a>
+    </div>
+    <div id="nav-right">
+      <a class="nav-right" href="contacto.html">Contactanos</a>
+    </div>
+  </nav>
+
+  <div id="content">
+    <div id="content-background">
+
+    </div>
+
+    <div class="informacion" style="padding: 20px;">
+      <h1 class="h1-center">
+        Ayudando a mejorar <br> la educacion en computación
+      </h1>
+      <p class="subtitle">
+        Unete a nuestra comunidad creciente de estudiantes y profesionales de la computación, y empoderate de las
+        herramientas necesarias para ser un profesional de la computación.
       </p>
-      <div id="landing-buttons">
-        <button type="button" name="goToBlog">Ir al Blog</button>
-        <button type="button" name="goToInfo">Ir al Repositorio</button>
+      <a class="button" href="#grupos" style="font-size: 20px; text-align: center;">Iniciar</a>
+      <div id="h1-center">
+        <h1>Una muestra de nuestea historia</h1>
+        <p class="subtitle">
+          Sigue un paso en la que nuestro equipo ha estado trabajando para mejorar la educacion en computacion.
+        </p>
+
+
+        <ul class="timeline">
+          <li class="event" data-date="2010, EE. UU.">
+            <h3>Lanzamiento de Codecademy</h3>
+            <p>Codecademy es fundado con el objetivo de ofrecer cursos en línea gratuitos para enseñar programación y
+              tecnología a cualquier persona interesada en aprender.</p>
+          </li>
+          <li class="event" data-date="2011, EE. UU.">
+            <h3>EdX es lanzado por Harvard y MIT</h3>
+            <p>EdX, una plataforma de aprendizaje en línea que ofrece cursos universitarios en línea, es fundado por la
+              Universidad de Harvard y el Instituto de Tecnología de Massachusetts (MIT).</p>
+          </li>
+          <li class="event" data-date="2012, EE. UU.">
+            <h3>Coursera es fundado por profesores de Stanford</h3>
+            <p>Coursera, una plataforma de educación en línea que ofrece cursos universitarios gratuitos, es fundado por
+              los profesores de Stanford, Andrew Ng y Daphne Koller.</p>
+          </li>
+          <li class="event" data-date="2013, Reino Unido">
+            <h3>Raspberry Pi se convierte en un fenómeno</h3>
+            <p>La Raspberry Pi, una computadora de placa única del tamaño de una tarjeta de crédito, se convierte en un
+              gran éxito entre los aficionados a la tecnología y los educadores debido a su bajo costo y su capacidad
+              para enseñar programación.</p>
+          </li>
+          <li class="event" data-date="2014, EE. UU.">
+            <h3>Code.org es fundado por Hadi y Ali Partovi</h3>
+            <p>Code.org es fundado por los hermanos Hadi y Ali Partovi con el objetivo de expandir el acceso a la
+              educación en ciencias de la computación en todo el mundo.</p>
+          </li>
+          <li class="event" data-date="2015, EE. UU.">
+            <h3>LaunchCode es fundado por Jim McKelvey</h3>
+            <p>LaunchCode es fundado por Jim McKelvey con el objetivo de proporcionar capacitación y oportunidades de
+              empleo en tecnología para personas de todas las edades y antecedentes.</p>
+          </li>
+          <li class="event" data-date="2016, EE. UU.">
+            <h3>Code for America lanza el programa "Brigade"</h3>
+            <p>Code for America lanza el programa "Brigade" con el objetivo de involucrar a los ciudadanos en la
+              resolución de problemas tecnológicos en sus comunidades.</p>
+          </li>
+          <li class="event" data-date="2017, EE. UU.">
+            <h3>Girls Who Code lanza el programa "Summer Immersion"</h3>
+            <p>Girls Who Code lanza el programa "Summer Immersion" con el objetivo de proporcionar a las niñas una
+              experiencia inmersiva en ciencias de la computación y tecnología.</p>
+          </li>
+          <li class="event" data-date="2023, México">
+            <h3>Hoy</h3>
+            <p>Se lanza el programa "Un BIT a la vez" en México. Siendo la primera vez que se tiene un acercamiento
+              hacia un grupo latinoamericano</p>
+          </li>
+      </div>
+
+      <h1 class="h1-center">
+        Conoce nuestras instalaciones <br> y a nuestro equipo
+      </h1>
+      <p class="subtitle">
+        Unete a nuestra comunidad creciente de estudiantes y profesionales de la computación, y empoderate de las
+        herramientas necesarias para ser un profesional de la computación.
+      </p>
+      <div class="gallery">
+        <img
+          src="https://forrit-one-msedu-p1-consumables.azureedge.net/media/7f9191d4-86a4-4be7-b113-cbbb6a67bd83/02%20Computer%20Science%20in%20the%20School%20Curriculum%20Toolkit%20800x450.png">
+        <img
+          src="https://forrit-one-msedu-p1-consumables.azureedge.net/media/de5eef6e-99b4-498a-95a0-80c724b340dc/03%20Computer%20Science%20in%20the%20School%20Curriculum%20Toolkit%20800x450.png">
+        <img
+          src="https://forrit-one-msedu-p1-consumables.azureedge.net/media/d327549d-2848-426a-957b-2081ac8c3fad/01%20Computer%20Science%20in%20the%20School%20Curriculum%20Toolkit%20800x450.png">
+      </div>
+
+
+    </div>
+
+    <div class="separator"></div>
+
+    <div id="contenido">
+      <sidebar id="sections">
+        <h1>Contenidos</h1>
+        <ul>
+          <!-- <li><a href="#hitoria">Historia</a></li>
+          <li><a href="#instalaciones">Instalaciones</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#contacto">Contacto</a></li> -->
+        </ul>
+      </sidebar>
+
+      <div class="inicio">
+        <h1 class="h1-center">
+          Inicio de una nueva era <br>
+          <div class="gradient-font">en la educacion</div>
+        </h1>
+        <p class="subtitle">
+          Unete a nuestra comunidad creciente de estudiantes y profesionales de la computación, y empoderate de las
+          herramientas necesarias para ser un profesional de la computación.
+        </p>
+
+        <div id="elementos">
+          <h2>Historia</h2>
+          <p>
+            La historia de la ciencia de la computación antecede a la invención del computador digital moderno. Antes de
+            la década de 1920, el término computador se refería a un ser humano que realizaba cálculos.
+            <hr> Los primeros cimientos de lo que se convertiría en ciencias de la computación son anteriores a la
+            invención de la computadora digital moderna. Se trataba de máquinas para el cálculo de las tareas numéricas
+            fijas, como el ábaco han existido desde la antigüedad, ayudando en cálculos tales como la multiplicación y
+            la división. Además, los algoritmos para realizar cálculos han existido desde la antigüedad, incluso antes
+            de que se crearan equipos de computación sofisticados. Los antiguos sánscritos tratadistas Shulba Sutras, o
+            "Reglas de la cuerda", es un libro de algoritmos escritos en 800 a. C. para la construcción de objetos
+            geométricos como altares utilizando una clavija y cuerda, un precursor temprano del campo moderno de la
+            geometría computacional.
+          </p>
+
+          <div class="gallery">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/3-Tasten-Maus_Microsoft.jpg/144px-3-Tasten-Maus_Microsoft.jpg">
+          </div>
+
+          <h2>Mayores logros</h2>
+          <p>
+            A pesar de su corto tiempo de ser una disciplina científica formal, las ciencias de la computación han hecho
+            un gran número de contribuciones importantes a la ciencia y la sociedad de hecho, junto con la electrónica,
+            es una ciencia fundacional de la época actual de la historia humana llamada Era de la información y la
+            Revolución de la Información, visto como el tercer gran salto en el progreso tecnológico humano después de
+            la Revolución Industrial (1750-1850) y la revolución neolítica (8000-5000 a. C.).
+          </p>
+
+          <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Enigma.jpg/220px-Enigma.jpg">
+            <img
+              src="https://www.thoughtco.com/thmb/f5ukwxmZSgnFG3yg0lLGaKfAw9k=/4288x2848/filters:no_upscale():max_bytes(150000):strip_icc()/apple-macintosh-classic-computer-118265826-5c3c0896c9e77c0001dfbfef.jpg">
+          </div>
+
+          <h2>Campos de estudio</h2>
+          <p>
+            Como disciplina científica, las ciencias de la computación abarca una gama de temas, desde los estudios
+            teóricos de los algoritmos y los límites de la computación a los problemas prácticos de la implementación de
+            sistemas computacionales en hardware y software.
+            <hr> Computing Sciences Acreditation Board o la Junta de Acreditación en Ciencias de la Computación. -
+            Compuesta por representantes de la Association for Computing Machinery (ACM), y la Sociedad de Computación
+            IEEE (IEEE-CS) - identifica cuatro áreas que considera cruciales para la disciplina de ciencias de la
+            computación: teoría de la computación, algoritmos y estructuras de datos, metodología y lenguajes de
+            programación, y arquitectura de computadoras.
+
+            <br><br>
+
+            Además de estas cuatro áreas, C.S.A.B. también identifica ámbitos como la ingeniería de software,
+            inteligencia artificial, redes de computadoras, sistemas de bases de datos, computación paralela,
+            computación distribuida, la interacción persona-computador, gráficos por ordenador, sistemas operativos,
+            cálculo numérico y simbólico siendo importantes áreas de las ciencias de la computación.40​
+
+            El campo más amplio de la ciencia de la computación teórica abarca tanto la teoría clásica de la computación
+            y una amplia gama de otros temas que se centran en los aspectos más abstractos, lógicos y matemáticos de la
+            computación.
+          </p>
+
+          <h2>Teoría de la computación</h2>
+          <p>
+            De acuerdo a Peter J. Denning, la pregunta fundamental en ciencias de la computación es, «¿Qué puede ser
+            eficientemente automatizado?»7​ El estudio de la teoría de la computación está enfocado en responder
+            preguntas fundamentales acerca de qué puede ser computado y qué cantidad de recursos son requeridos para
+            ejecutar tales cómputos. En un esfuerzo por resolver esta pregunta, la teoría de la computabilidad examina
+            qué problemas computacionales se pueden resolver en varios modelos teóricos de cómputo. La segunda pregunta
+            está dirigida por la teoría de la complejidad computacional, que estudia los costos de tiempo y espacio
+            asociados a diferentes enfoques para resolver una multitud de problemas computacionales.
+
+            El famoso problema "¿P=NP?" es uno de los Problemas del milenio,43​ es un problema abierto en ciencias de la
+            computación.
+          </p>
+
+          <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/DFAexample.svg/96px-DFAexample.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Wang_tiles.svg/96px-Wang_tiles.svg.png">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Blochsphere.svg/96px-Blochsphere.svg.png">
+          </div>
+
+          <h2>Teoría de la información y códigos</h2>
+          <p>La teoría de la información está relacionada con la cuantificación de la información. Fue desarrollada por
+            Claude E. Shannon para desarrollar los límites fundamentales del procesamiento de señales así como sus
+            operaciones, tales como compresión y almacenamiento de datos así como la comunicación de los datos de manera
+            fiable.44​La teoría de códigos es un área de las matemáticas que busca resolver el problema de detectar y
+            corregir errores al momento de transmitir información.45​ Los códigos son usados para comprimir datos,
+            criptografía y más recientemente para la codificación de redes. Los códigos son estudiados para el propósito
+            de diseñar métodos eficientes y seguros para la transmisión de datos.</p>
+
+          <h2>Algoritmos y estructuras de datos</h2>
+          <p>Los algoritmos y las estructuras de datos son el estudio de métodos computacionales comúnmente usados así
+            como su eficiencia computacional.</p>
+
+          <div class="gallery">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sorting_quicksort_anim.gif/96px-Sorting_quicksort_anim.gif">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/TSP_Deutschland_3.png/96px-TSP_Deutschland_3.png">
+          </div>
+
+          <h2>Teoría de lenguajes de programación</h2>
+          <p>La teoría del lenguaje de programación es una rama de las ciencias de la computación que se ocupa del
+            diseño, activación, análisis, caracterización y clasificación de los lenguaje de programación y sus
+            características individuales, cae dentro de la disciplina de las ciencias de la computación, tanto en
+            dependencia de las matemáticas y la lingüística. Es un área de investigación activa, con numerosas revistas
+            académicas y conferencias especializadas en el tema.</p>
+
+          <div class="gallery">
+            <img src="https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="">
+            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/java-4-logo.png" alt="">
+          </div>
+
+          <h2>Ingeniería de software</h2>
+          <P>Ingeniería de software consiste en el estudio del diseño, activación y modificación del software con la
+            finalidad de asegurarse de que es de alta calidad, asequible, fácil de mantener, y rápido de construir. Es
+            un enfoque sistemático para el diseño de software, que implica la aplicación de prácticas de ingeniería de
+            software. Los ingenieros de software comercian con la organización y análisis de software — no solo lidian
+            con la creación o fabricación de un nuevo soporte lógico, sino también con su mantenimiento y disposición
+            interna. Se prevé que estén entre las ocupaciones de más rápido crecimiento entre 2008 y 2018. Debido a la
+            novedad de este subcampo, la educación formal en Ingeniería de software generalmente es parte de los planes
+            de estudio de ciencias de la computación, la gran mayoría de ingenieros de software tienen un grado
+            académico en ciencias de la computación sin tener relación con la ingeniería.</P>
+
+          <div class="gallery">
+            <img
+              src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3cIZo9bfq14o3zy3JsPG7r/95779d9ecb6ba5eeb6005a9482bcc3d0/GettyImages-1209452765.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h="
+              alt="">
+          </div>
+
+          <h2>Relación con otros campos</h2>
+          <p>Por ser una disciplina reciente, existen varias definiciones alternativas para la ciencia de la
+            computación. Esta puede ser vista como una forma de ciencia, matemáticas o una nueva disciplina que no puede
+            ser categorizada siguiendo los modelos actuales.</p>
+
+          <p>Las ciencias de la computación frecuentemente se cruzan con otras áreas de investigación, tales como la
+            física y la lingüística. Pero es con las matemáticas con las que se considera que tiene un grado mayor de
+            relación. Eso es evidenciado por el hecho de que los primeros trabajos en el área fueran fuertemente
+            influenciados por matemáticos como Kurt Gödel y Alan Turing. En la actualidad sigue habiendo un intercambio
+            de ideas útil entre ambos campos en áreas como la lógica matemática, la teoría de categorías, la teoría de
+            dominios, el álgebra y la geometría.</p>
+
+          <p>Otro punto a destacar es que, a pesar de su nombre, las ciencias de la computación raramente involucran el
+            estudio mismo de las máquinas conocidas como computadoras. De hecho, el renombrado científico Edsger
+            Dijkstra es muy citado por la frase «Las ciencias de la computación están tan poco relacionadas con los
+            ordenadores como la astronomía con los telescopios». La investigación en ciencias de la computación también
+            suele relacionarse con otras disciplinas, como la ciencia cognitiva, la física (véase computación cuántica),
+            la lingüística, etc.</p>
+
+          <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/IBM_Blue_Gene_P_supercomputer.jpg" alt="">
+            <img src="https://assets.weforum.org/article/image/Aj-nQvt8YK-6bKUoni0F1r_0EWZLW4BdWCmILGlortw.jpg" alt="">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/A107/production/_90032214_mediaitem90032213.jpg"
+              alt="">
+            <img
+              src="https://www.bbvaopenmind.com/wp-content/uploads/2019/09/BBVA-OpenMind-Materia-Top-Supercompuradoras-1.jpg"
+              alt="">
+          </div>
+
+          <p>La relación entre las ciencias de la computación y la ingeniería de software es un tema muy discutido, por
+            disputas sobre lo que realmente significa la lución «ingeniería de software» y sobre cómo se define a las
+            ciencias de la computación. Algunas personas creen que la ingeniería de software sería un subconjunto de las
+            ciencias de la informática. Otras, tomando en cuenta la relación entre otras disciplinas científicas y de la
+            ingeniería, creen que el principal objetivo de las ciencias de la computación sería estudiar las propiedades
+            del cómputo en general, mientras que el objetivo de la ingeniería de software sería diseñar cómputos
+            específicos para lograr objetivos prácticos, con lo que se convertiría en disciplinas diferentes. Este punto
+            de vista es el que sostiene, por ejemplo, Parnas (1998). Incluso hay otros que sostienen que no podría
+            existir una ingeniería de software.</p>
+
+          <p>Los aspectos académicos, políticos y de financiamiento en las áreas de ciencias de la computación tienden a
+            verse influidos drásticamente por el criterio del departamento encargado de la investigación y la educación
+            en cada universidad, que puede estar orientado a las matemática o a la ingeniería. Los departamentos de
+            ciencias de la computación orientados a las matemáticas teóricas suelen alinearse del lado de la computación
+            científica y las aplicaciones de cálculo numérico.</p>
+
+          <p>La locución «computación científica», que no debe confundirse con ciencia de la computación, designa a
+            todas
+            aquellas prácticas destinadas a modelar, plantear experimentos y validar teorías científicas sirviéndose de
+            medios informáticos. En estos casos la computación es una mera herramienta y el esfuerzo se dirige a avanzar
+            en los campos objetivo (física, biología, mecánica de fluidos, radiotransmisión...), más que en la propia
+            ciencia de la computación.</p>
+
+          <p>Finalmente, el público en general algunas veces confunde la ciencia de la computación con áreas
+            vocacionales
+            que trabajan con computadoras o piensan que trata acerca de su propia experiencia con las computadoras, lo
+            cual suele incluir actividades como los juegos, la navegación web y el procesamiento de texto. Sin embargo,
+            el punto central de la ciencia de la computación va más allá de entender las propiedades de los programas
+            que se emplean para ejecutar aplicaciones de software como juegos y navegadores web, y utiliza ese
+            entendimiento para crear nuevos programas o mejorar los existentes.</p>
+
+        </div>
+
       </div>
     </div>
 
-    <div id=""></div>
-  </body>
+    <div class="separator"></div>
 
-  <script type="text/javascript">
-    var vsid = "si25299e8f15533";
-    (function () {
-      var vsjs = document.createElement("script");
-      vsjs.type = "text/javascript";
-      vsjs.async = true;
-      vsjs.setAttribute("defer", "defer");
-      vsjs.src = "https://www.virtualspirits.com/vsa/chat.js";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(vsjs, s);
-    })();
-  </script>
+    <div class="cuestionario">
+      <h1 class="h1-center">
+        Mantente informado <br> de los ultimos movimientos
+      </h1>
+      <p class="subtitle">
+        Dejanos tu correo para que te mantengas informado de los ultimos movimientos de la pagina y puedas disfrutar de
+        los nuevos contenidos que se suban a la pagina. Ademas de que podras participar en los sorteos que se realicen.
+      </p>
+
+      <div id="contactForm">
+        <div id="signForm">
+          <div id="signcontent">
+            <h1>Di hola a las historias de la comunidad</h1>
+            <h2>Esucha a nuestros ususarios compartir sus experiencias y se parte de esta gran comunidad</h2>
+            <form name="subscribe">
+              <input type="email" name="email" placeholder="you@email.com" required>
+              <input type="button" value="Suscribirse" onclick="suscribe()">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="grupos">
+      <div>
+        <h1 class="h1-center">
+          Unete a nuestro gran equipo <wbr>
+          dentro de las mejores comunidades
+        </h1>
+        <p class="subtitle">
+          Sigue la siguiente compilación de comunidades de ciencia de la computación en línea, donde podrás encontrar a
+          distintos ususarios de la pagina y compartir tus experiencias con ellos.
+        </p>
+        <div class="gallery">
+          <!-- Logos of stackoverflow communities -->
+          <a href="https://stackoverflow.com/"><img
+              src="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon.png?v=608f1f1e4e7f" alt=""></a>
+
+          <a href="es.https://stackoverflow.com/"><img
+              src="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon.png?v=608f1f1e4e7f" alt=""></a>
+
+          <a href="https://stackexchange.com/"><img src="./images/stackexchangelogo.svg" alt=""></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer-background"></div>
+    <div id="footer-info">
+      <div>
+        <img src="favico.ico">
+      </div>
+      <div>
+        <h4>
+          Autor
+        </h4>
+        <p>
+          Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</div>
+
+<script>
+  // Take every "historia" id, take every h2 and paste the text inside the h2 in the "sections" sidebar
+  var historia = document.getElementById("elementos");
+  var h2 = historia.getElementsByTagName("h2");
+  var sections = document.getElementById("sections");
+  var ul = sections.getElementsByTagName("ul")[0];
+  for (var i = 0; i < h2.length; i++) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.setAttribute("href", "#" + h2[i].innerHTML.toLowerCase());
+    a.innerHTML = h2[i].innerHTML;
+    li.appendChild(a);
+    ul.appendChild(li);
+  }
+
+  // To every h2 add an id with the text inside the h2
+  for (var i = 0; i < h2.length; i++) {
+    h2[i].setAttribute("id", h2[i].innerHTML.toLowerCase());
+  }
+
+</script>
+
+<script type="text/javascript">
+  var vsid = "si2542450cbe6d8";
+  (function () {
+    var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+    vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+    // Remove element
+    s.parentNode.removeChild(s);
+  })();
+</script>
+
+
 </html>

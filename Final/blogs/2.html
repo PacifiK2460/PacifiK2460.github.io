@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Proyecto Final" />
+    <title>[PROYECTO FINAL]</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" href="../favico.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/mhtml2html@3.0.0" type="javascript"></script>
+
+    <script>
+        async function getBlog(url) {
+            // Open html file that is named with the same name as the blog
+            let response = await fetch("blogs/" + url + ".mhtml");
+            let data = await response.text();
+
+            // Parse as html
+            import("https://unpkg.com/mhtml2html@3.0.0");
+            let html = mhtml2html(data);
+            console.log(html)
+
+        }
+    </script>
+
+    <script>
+        function newcomment() {
+            console.log("Commenting");
+            // Get the text from the comment
+            let comment = document.querySelector("input[name='comment']").value;
+
+            if (comment == "") {
+                return;
+            }
+
+            // Create a new div
+            let newDiv = document.createElement("div");
+            // Set the class of the div
+            newDiv.className = "comment";
+            // Set the inner html of the div
+            newDiv.innerHTML = `
+            <div class="comment-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="comment-info">
+                <div class="comment-name">
+                    <h3>Visitante Anonimo</h3>
+                </div>
+                <div class="comment-content">
+                    <p>${comment}</p>
+                </div>
+            </div>
+        `;
+            // Append the new div to the comments div
+            document.querySelector(".blog-comments").appendChild(newDiv);
+
+            // Clear the input
+            document.querySelector("input[name='comment']").value = "";
+
+            // Save the comment to local storage
+            saveComment(comment);
+        }
+    </script>
+
+    <script>
+        function saveComment(comment) {
+            // Get the comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // If there are no comments, create a new array
+            if (comments == null) {
+                comments = [];
+            }
+
+            // Add the new comment to the array
+            comments.push({ comment: comment });
+
+            // Save the comments to local storage
+            localStorage.setItem("comments", JSON.stringify(comments));
+        }
+    </script>
+
+    <script>
+        function loadComments() {
+            // Load comments from local storage
+            let comments = JSON.parse(localStorage.getItem("comments"));
+
+            // Post comments
+            for (let i = 0; i < comments.length; i++) {
+                // Create a new div
+                let newDiv = document.createElement("div");
+                // Set the class of the div
+                newDiv.className = "comment";
+                // Set the inner html of the div
+                newDiv.innerHTML = `
+                <div class="comment-icon">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                </div>
+                <div class="comment-info">
+                    <div class="comment-name">
+                        <h3>Visitante Anonimo</h3>
+                    </div>
+                    <div class="comment-content">
+                        <p>${comments[i].comment}</p>
+                    </div>
+                </div>
+            `;
+                // Append the new div to the comments div
+                document.querySelector(".blog-comments").appendChild(newDiv);
+            }
+        }
+
+        window.onload = loadComments;
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="nav-left">
+            <a class="nav-left-content" href="index.html">
+                <img src="favico.ico" alt="logo" />
+            </a>
+        </div>
+        <div id="nav-center">
+            <a class="nav-center-content" href="../index.html">Inicio</a>
+            <a class="nav-center-content" href="../blogs.html">Blog</a>
+            <a class="nav-center-content" href="../faq.html">FAQ</a>
+        </div>
+        <div id="nav-right">
+            <a class="nav-right" href="../contacto.html">Contactanos</a>
+        </div>
+    </nav>
+
+    <div id="content">
+        <div id="content-background"></div>
+
+        <div class="blog-landing">
+            <div class="blog-heading">
+                <img src="https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?s=612x612&w=0&k=20&c=nHMypkMTU1HUUW85Zt0Ff7MDbq17n0eVeXaoM9Knt4Q="
+                    alt="">
+                <h1 class="h1-center">Los distintos roles dentro del User Experience (UX)
+                </h1>
+            </div>
+            <p class="subtitle"></p>
+        </div>
+
+        <div class="author">
+            <div class="author-icon">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+            </div>
+            <div class="author-info">
+                <div class="author-name">
+                    <h3>Gonzalo Parra</h3>
+                </div>
+                <div class="author-location">
+                    <p>Medium</p>
+                </div>
+            </div>
+            <div class="author-published">
+                <p>Jun 21, 2018</p>
+            </div>
+        </div>
+
+        <div class="blog-content">
+
+            <div class="blog-text">
+
+                <p>Cuando queremos saber quién es o qué hace un User Experience (UX) Designer, una búsqueda en la web
+                    nos arroja una colección de cargos laborales o descripciones que van más allá de nuestra duda
+                    inicial y podrían llegar a confundirnos un poco.
+
+                </p>
+
+                <p>
+                    Para complicar un poco más la situación, es probable que el término UX Designer sea comprendido de
+                    manera diferente entre empresas o individuos. Esta variedad de explicaciones y entendimientos está
+                    relacionada con los distintos roles que un UX Designer realiza en su trabajo.
+
+
+                </p>
+
+                <p>
+                    Para conocer qué roles toma un UX Designer dentro del mundo de UX, primero, debemos saber ¿qué es
+                    UX? y ¿qué hace un UX Designer?. Como explicamos en un artículo previo, User Experience es la
+                    impresión que un usuario tiene al relacionarse con una marca, con una empresa o con un producto o
+                    servicio.
+
+
+                </p>
+
+                <p>
+                    Entonces, un UX Designer pasa su tiempo trabajando en el diseño de la experiencia que los usuarios
+                    viven cuando utilizan algún producto. Este trabajo comprende una serie de actividades que en
+                    Laboratoria agrupamos en: investigación, ideación y prototipado/diseño.
+
+
+                </p>
+
+                <p>
+                    El trabajo realizado en cada una de estas actividades son los roles o especializaciones que puede
+                    seguir un UX Designer dentro de un proyecto o empresa. Dependiendo del tamaño del equipo donde
+                    trabaje, un UX Designer puede tomar todos o un subconjunto de estos roles.
+
+
+                </p>
+
+                <div class="gallery" style="width: 100%;">
+                    <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*WcbeIbwa_AKuIW-MIObJnA.png" alt=""
+                        style="width: 800px; height: auto;">
+                </div>
+
+                <h2>UX Researcher
+                </h2>
+
+                <p>Se enfoca en definir a los usuarios y ayudar a entenderlos. Esto implica saber ¿quiénes son?, ¿cómo
+                    se comportan? y ¿cuáles son sus necesidades?.
+
+                </p>
+
+
+                <p>
+                    Un UX Researcher puede realizar entrevistas o encuestas, investigaciones contextuales o aplicar
+                    métodos etnográficos. Estas actividades pueden implicar una visita al ambiente de trabajo del
+                    usuario para realizar observaciones y entrevistas. El UX Researcher también analiza el
+                    comportamiento de usuarios a través de analíticas de uso de un producto y dependiendo de la etapa de
+                    desarrollo de un producto; también es el encargado de realizar evaluaciones de usabilidad para
+                    analizar el diseño y desempeño de un producto.
+                </p>
+
+                <p>
+                    Entregables comunes: Entrevistas a usuarios. User Personas. Mapas de experiencia del usuario.
+                    Pruebas de A/B. Evaluaciones de Usabilidad. Encuestas. Reportes de análiticas.
+
+
+                </p>
+
+                <h2>Information Architect
+                </h2>
+
+                <p>
+                    Se enfoca en ayudar al usuario a: entender un producto y encontrar o realizar fácilmente las tareas
+                    que desean hacer. Para ello, su trabajo incluye la definición y la organización de contenido y un
+                    flujo claro de navegación. Con este fin, hace uso de herramientas como mapas de sitio o modelos de
+                    contenido, card sorting, testing pools y wireframing.
+
+
+                </p>
+
+                <p>Entregables comunes: Mapas de sitio. Esquema de navegación. Auditorias de contenido. Taxonomías.
+
+
+                </p>
+
+                <h2>UI Designer
+                </h2>
+                <p>Un diseñador de interfaz de usuario (UI) se enfoca en esquematizar cada una de las pantallas o
+                    páginas con las cuales debe interactuar un usuario. Su principal trabajo consiste en definir y
+                    organizar los elementos que el usuario debe emplear para completar una tarea. El objetivo es
+                    presentar una interfaz que pueda ser entendida y fácilmente usada por el usuario basada en los
+                    requerimientos identificados en etapas previas.
+
+                </p>
+
+                <p>
+                    Entregables comunes: Sketches, Mockups, Prototipos (alta y baja fidelidad) de la interfaz de
+                    usuario. Guía de estilos del producto.
+
+
+                </p>
+            </div>
+
+        </div>
+        <div class="blog-comments">
+
+        </div>
+        <div class="newComment" style="width: 100%;">
+            <div id="contactForm">
+                <div id="signForm">
+                    <div id="signcontent">
+                        <h1>Deja un legado en esta comunidad</h1>
+                        <h2>Acercate con quienes mas aprecias y deja un comentario publico.</h2>
+                        <form name="subscribe">
+                            <input type="text" name="comment" placeholder="Un comentario agradable" required>
+                            <input type="button" value="Comentar" onclick="newcomment()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer-background"></div>
+            <div id="footer-info">
+                <div>
+                    <img src="../favico.ico">
+                </div>
+                <div>
+                    <h4>
+                        Autor
+                    </h4>
+                    <p>
+                        Martinez Lara Santiago de la cruz, Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</div>
+
+
+
+<script type="text/javascript">
+    var vsid = "si2542450cbe6d8";
+    (function () {
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = 'https://www.virtualspirits.com/vsa/chat.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+
+        // Remove element
+        s.parentNode.removeChild(s);
+    })();
+</script>
+
+<script>
+    let queryString = window.location.search;
+    // From URL string to normal string
+    queryString = decodeURIComponent(queryString);
+    // Remove the ? character
+    queryString = queryString.substring(1);
+    let data = JSON.parse(queryString);
+
+    // Set blog title to the title of the blog
+    document.querySelector(".h1-center").innerHTML = data.titulo;
+    // Set blog subtitle to the subtitle of the blog
+    document.querySelector(".subtitle").innerHTML = data.descripcion;
+
+    getBlog(data.titulo)
+
+</script>
+
+
+</html>
