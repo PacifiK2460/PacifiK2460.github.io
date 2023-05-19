@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Examen Practico 3</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Form to get the user input his name and birth date -->
+    <div id="user">
+        <form id="user-input">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+            <label for="date">Fecha de nacimiento:</label>
+            <input type="date" id="date" name="date" required>
+            <input type="button" onclick="calculate()" value="Enviar">
+        </form>
+    </div>
+    <div id="response">
+        <p id="response-text">Por Favor, completa el formulario</p>
+        <img id="response-img" src="https://maxx.discount/wp-content/uploads/2022/01/Discount-1.png" alt="">
+    </div>
+
+    <script>
+        function calculate(){
+            // If the current month is the same as the users birth month
+            // Change the text and the image to the discount
+
+            // Get the user input
+            let name = document.getElementById("name").value;
+            let date = document.getElementById("date").value;
+
+            // Check if the user input is valid
+            if(name == "" || date == ""){
+                document.getElementById("response-text").innerHTML = "Por Favor, completa el formulario";
+                document.getElementById("response").style.display = "flex";
+                return;
+            }
+
+            let birthMonth = date.split("-")[1];
+
+            // Get the current date
+            let today = new Date();
+            let currentMonth = today.getMonth() + 1;
+            if(currentMonth == birthMonth){
+                document.getElementById("response-text").innerHTML = "Felicidades " + name + ", tienes un 10% de descuento";
+                // Change display of the response div 
+                document.getElementById("response-img").style.display = "flex";
+            } else {
+                document.getElementById("response-text").innerHTML = "Lo sentimos " + name + ", no tienes descuento";
+                // Change display of the response div 
+                document.getElementById("response-img").style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
